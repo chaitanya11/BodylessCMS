@@ -1,6 +1,6 @@
 # BodylessCMS
 
-BodylessCMS dosen't require any kind of Backend or database or anykind of third party api's, but can provide content management and scalability to any extent. The main objective of this project to cut down infratructure cost and complexity of CMS. We already has a concept of [HeadlessCMS](https://en.wikipedia.org/wiki/Headless_CMS), which has plain user interface to serve content from third party api's. That requires reliable third party to store our content and cost for content management and for security of data. In BodylessCMS you just need AWS s3 to serve content and to manage website. Security has no issues, reliable and scalable to any extinct.
+BodylessCMS doesn't require any kind of Backend or database or any kind of third party api's, but can provide content management and scalability to any extent. The main objective of this project to cut down infrastructure cost and complexity of CMS. We already has a concept of [HeadlessCMS](https://en.wikipedia.org/wiki/Headless_CMS), which has plain user interface to serve content from third party api's. That requires reliable third party to store our content and cost for content management and for security of data. In BodylessCMS you just need AWS s3 to serve content and to manage website. Security has no issues, reliable and scalable to any extinct.
 
 ## Development server
 
@@ -95,7 +95,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## checkpoints
 * Webpack integration
 * S3 integration
-* Save Content desinged from admin dashboard to S3.
+* Save Content designed from admin dashboard to S3.
 * Render content from S3 and show in Public landing page.
 * Add security to application.
-* All other imporvements (Themes, preview, different kinds of content, etc).
+* All other improvements (Themes, preview, different kinds of content, etc).
