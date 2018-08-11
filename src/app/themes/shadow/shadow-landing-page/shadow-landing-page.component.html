@@ -1,3 +1,18 @@
-<p>
-  shadow-landing-page works!
-</p>
+<div class="container-fluid" oncontextmenu="return false;" (contextmenu)="showContextMenu($event)" (click)="isContextVisible=false;">
+  <app-shadow-header></app-shadow-header>
+  <div class="row">
+    <div class="col-md-8">
+      <p>content</p>
+    </div>
+    <div class="col-md-4">
+      <p>side bar</p>
+    </div>
+  </div>
+  <app-shadow-footer></app-shadow-footer>
+</div>
+
+
+<!--you have to write this only once in your component-->
+<div *ngIf="isContextVisible">
+  <app-shadow-contextmenu [x]="contextMenuX" [y]="contextMenuY" (action)="captureContextAction($event)" [value]="contextValue"></app-shadow-contextmenu>
+</div>

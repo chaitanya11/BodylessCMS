@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Headerpage } from '../shadow-beans/header-page.bean';
 
 @Component({
   selector: 'app-shadow-header',
@@ -6,10 +7,36 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./shadow-header.component.scss']
 })
 export class ShadowHeaderComponent implements OnInit {
+  websiteName: string;
+  pages: Array<Headerpage>;
 
   constructor() { }
 
   ngOnInit() {
+    this.initHeader();
   }
 
+  getHeaderData() {
+    // TODO replace with aws code.
+    const headerData = {
+      webSiteName: 'ShadowFight',
+      pages: [
+        { name: 'Home', destination: 'dashboard', activeClass: 'active' },
+        { name: 'Page1', destination: '#page2', activeClass: '' },
+        { name: 'Page3', destination: '#page3', activeClass: '' }
+      ]
+    };
+    return headerData;
+  }
+
+  initHeader() {
+    const headerData = this.getHeaderData();
+    this.websiteName = headerData.webSiteName;
+    this.pages = headerData.pages;
+  }
+
+
+  captureContextAction(action) {
+    console.log(action);
+  }
 }
