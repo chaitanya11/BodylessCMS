@@ -27,9 +27,14 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "./node_modules/grapesjs/dist/css/grapes.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.min.js",
+              "./node_modules/grapesjs/dist/grapes.min.js",
+              "./node_modules/grapesjs-blocks-basic/dist/grapesjs-blocks-basic.min.js"
+            ]
           },
           "configurations": {
             "production": {
