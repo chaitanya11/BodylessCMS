@@ -6,6 +6,10 @@ const routes: Routes = [
   {
     path: '',
     component: DashboardComponent
+  },
+  {
+    path: 'shdowTheme',
+    loadChildren: '../themes/shadow/shadow.module#ShadowModule'
   }
 ];
 
