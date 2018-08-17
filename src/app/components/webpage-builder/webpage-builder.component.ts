@@ -6,19 +6,19 @@ declare var grapesjs: any; // Important!
  * This is a the base component for building the WebPages using the GrapeJs.
  */
 @Component({
-    selector: 'webpage-builder',
-    template: '<div id="sample"></div>'
+    selector: 'app-webpage-builder',
+    template: '<div id="gjs"></div>'
 })
 export class WebPageBuilderComponent implements OnInit {
 
     ngOnInit() {
         grapesjs.init({
-            container: '#sample',
+            container: '#gjs',
             components: '<div class="txt-red">Hello folks! Welcome to Bodyless CMS</div>',
             style: '.txt-red{color: blue}',
-            plugins: ['gjs-blocks-basic'],
+            plugins: ['gjs-preset-webpage'],
             pluginsOpts: {
-                'gjs-blocks-basic': {/* ...options */ }
+                'gjs-preset-webpage': {/* ...options */ }
             }
         });
     }

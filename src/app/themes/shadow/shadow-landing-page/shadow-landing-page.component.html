@@ -1,5 +1,5 @@
-<div class="container-fluid" oncontextmenu="return false;" (contextmenu)="showContextMenu($event)" (click)="isContextVisible=false;">
-  <app-shadow-header></app-shadow-header>
+<div class="container-fluid" (click)="isContextVisible=false;">
+  <app-shadow-header (contextmenu)="showContextMenu($event, 'header')" oncontextmenu="return false;"></app-shadow-header>
   <div class="row">
     <div class="col-md-8">
       <p>content</p>
@@ -8,7 +8,7 @@
       <p>side bar</p>
     </div>
   </div>
-  <app-shadow-footer></app-shadow-footer>
+  <app-shadow-footer (contextmenu)="showContextMenu($event, 'footer')" oncontextmenu="return false;"></app-shadow-footer>
 </div>
 
 

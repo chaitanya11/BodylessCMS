@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter } from '@angular/core';
 import { Headerpage } from '../shadow-beans/header-page.bean';
 
 @Component({
@@ -9,11 +9,19 @@ import { Headerpage } from '../shadow-beans/header-page.bean';
 export class ShadowHeaderComponent implements OnInit {
   websiteName: string;
   pages: Array<Headerpage>;
+  @Input('conetextMenuEvent') conetextMenuEvent: EventEmitter<any> = new EventEmitter<any>();
 
   constructor() { }
 
   ngOnInit() {
+    this.subscribeToEvents();
     this.initHeader();
+  }
+
+  subscribeToEvents() {
+    this.conetextMenuEvent.subscribe(data => {
+
+    });
   }
 
   getHeaderData() {
