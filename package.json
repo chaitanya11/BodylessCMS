@@ -25,7 +25,8 @@
     "core-js": "^2.5.4",
     "grapesjs": "^0.14.25",
     "grapesjs-blocks-basic": "^0.1.8",
-    "grapesjs-plugin-s3": "^0.1.2",
+    "grapesjs-plugin-publish-s3": "^1.0.2",
+    "grapesjs-plugin-s3": "^0.1.4",
     "jquery": "^3.3.1",
     "rxjs": "^6.0.0",
     "zone.js": "^0.8.26"

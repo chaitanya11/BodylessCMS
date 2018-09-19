@@ -32,7 +32,7 @@ export class WebPageBuilderComponent implements OnInit {
             container: '#gjs',
             components: '<div class="txt-red">Hello folks! Welcome to Bodyless CMS</div>',
             style: '.txt-red{color: blue}',
-            plugins: ['gjs-plugin-s3', 'gjs-blocks-basic'],
+            plugins: ['gjs-plugin-s3', 'gjs-blocks-basic', 'gjs-plugin-publish-s3'],
             pluginsOpts: {
                 'gjs-plugin-s3': {
                     imgFormats: ["png", "jpeg", "jpg"],
@@ -42,7 +42,13 @@ export class WebPageBuilderComponent implements OnInit {
                     secretAccessKey: this._configService.secretAccessKey,
                     sessionToken: this._configService.sessionToken
                 },
-                'gjs-blocks-basic': {}
+                'gjs-blocks-basic': {},
+                'gjs-plugin-publish-s3': {
+                    bucketName: "bodylesscms",
+                    accessKeyId: this._configService.accessKeyId,
+                    secretAccessKey: this._configService.secretAccessKey,
+                    sessionToken: this._configService.sessionToken
+                }
             }
         });
     }
