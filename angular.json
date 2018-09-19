@@ -29,13 +29,13 @@
             "styles": [
               "src/styles.scss",
               "./node_modules/grapesjs/dist/css/grapes.min.css",
-              "./node_modules/grapesjs-preset-webpage/dist/grapesjs-preset-webpage.min.css"
+              "./node_modules/grapesjs-plugin-s3/dist/grapesjs-plugin-s3.css"
             ],
             "scripts": [
               "./node_modules/jquery/dist/jquery.min.js",
               "./node_modules/grapesjs/dist/grapes.min.js",
               "./node_modules/grapesjs-blocks-basic/dist/grapesjs-blocks-basic.min.js",
-              "./node_modules/grapesjs-preset-webpage/dist/grapesjs-preset-webpage.min.js"
+              "./node_modules/grapesjs-plugin-s3/dist/grapesjs-plugin-s3.min.js"
             ]
           },
           "configurations": {

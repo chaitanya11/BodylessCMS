@@ -25,6 +25,9 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Folder structure
 
 ````.
+.
+├── LICENSE
+├── README.md
 ├── angular.json
 ├── e2e
 │   ├── protractor.conf.js
@@ -32,27 +35,49 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 │   │   ├── app.e2e-spec.ts
 │   │   └── app.po.ts
 │   └── tsconfig.e2e.json
-├── LICENSE
-├── package.json
 ├── package-lock.json
-├── README.md
+├── package.json
 ├── src
 │   ├── app
 │   │   ├── admin
+│   │   │   ├── admin-routing.module.ts
 │   │   │   ├── admin.module.spec.ts
 │   │   │   ├── admin.module.ts
-│   │   │   ├── admin-routing.module.ts
-│   │   │   └── dashboard
-│   │   │       ├── dashboard.component.html
-│   │   │       ├── dashboard.component.scss
-│   │   │       ├── dashboard.component.spec.ts
-│   │   │       └── dashboard.component.ts
+│   │   │   ├── dashboard
+│   │   │   │   ├── dashboard.component.html
+│   │   │   │   ├── dashboard.component.scss
+│   │   │   │   ├── dashboard.component.spec.ts
+│   │   │   │   └── dashboard.component.ts
+│   │   │   ├── login
+│   │   │   │   ├── login.component.html
+│   │   │   │   ├── login.component.scss
+│   │   │   │   ├── login.component.spec.ts
+│   │   │   │   └── login.component.ts
+│   │   │   └── signup
+│   │   │       ├── signup.component.html
+│   │   │       ├── signup.component.scss
+│   │   │       ├── signup.component.spec.ts
+│   │   │       └── signup.component.ts
+│   │   ├── app-routing.module.ts
 │   │   ├── app.component.html
 │   │   ├── app.component.scss
 │   │   ├── app.component.spec.ts
 │   │   ├── app.component.ts
 │   │   ├── app.module.ts
-│   │   ├── app-routing.module.ts
+│   │   ├── aws-services
+│   │   │   ├── cognito
+│   │   │   │   ├── cognito.service.spec.ts
+│   │   │   │   └── cognito.service.ts
+│   │   │   ├── config
+│   │   │   │   ├── config.service.spec.ts
+│   │   │   │   ├── config.service.ts
+│   │   │   │   └── index.ts
+│   │   │   └── s3
+│   │   │       ├── s3.service.spec.ts
+│   │   │       └── s3.service.ts
+│   │   ├── components
+│   │   │   └── webpage-builder
+│   │   │       └── webpage-builder.component.ts
 │   │   ├── landing-page
 │   │   │   ├── landing-page.component.html
 │   │   │   ├── landing-page.component.scss
@@ -63,16 +88,49 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 │   │   │   ├── page-not-found.component.scss
 │   │   │   ├── page-not-found.component.spec.ts
 │   │   │   └── page-not-found.component.ts
-│   │   └── public
-│   │       ├── landing-page
-│   │       │   ├── landing-page.component.html
-│   │       │   ├── landing-page.component.scss
-│   │       │   ├── landing-page.component.spec.ts
-│   │       │   └── landing-page.component.ts
-│   │       ├── public.module.spec.ts
-│   │       ├── public.module.ts
-│   │       └── public-routing.module.ts
+│   │   ├── public
+│   │   │   ├── landing-page
+│   │   │   │   ├── landing-page.component.html
+│   │   │   │   ├── landing-page.component.scss
+│   │   │   │   ├── landing-page.component.spec.ts
+│   │   │   │   └── landing-page.component.ts
+│   │   │   ├── public-routing.module.ts
+│   │   │   ├── public.module.spec.ts
+│   │   │   └── public.module.ts
+│   │   └── themes
+│   │       └── shadow
+│   │           ├── shadow-beans
+│   │           │   └── header-page.bean.ts
+│   │           ├── shadow-contextmenu
+│   │           │   ├── shadow-contextmenu.component.html
+│   │           │   ├── shadow-contextmenu.component.scss
+│   │           │   ├── shadow-contextmenu.component.spec.ts
+│   │           │   └── shadow-contextmenu.component.ts
+│   │           ├── shadow-dashboard
+│   │           │   ├── shadow-dashboard.component.html
+│   │           │   ├── shadow-dashboard.component.scss
+│   │           │   ├── shadow-dashboard.component.spec.ts
+│   │           │   └── shadow-dashboard.component.ts
+│   │           ├── shadow-footer
+│   │           │   ├── shadow-footer.component.html
+│   │           │   ├── shadow-footer.component.scss
+│   │           │   ├── shadow-footer.component.spec.ts
+│   │           │   └── shadow-footer.component.ts
+│   │           ├── shadow-header
+│   │           │   ├── shadow-header.component.html
+│   │           │   ├── shadow-header.component.scss
+│   │           │   ├── shadow-header.component.spec.ts
+│   │           │   └── shadow-header.component.ts
+│   │           ├── shadow-landing-page
+│   │           │   ├── shadow-landing-page.component.html
+│   │           │   ├── shadow-landing-page.component.scss
+│   │           │   ├── shadow-landing-page.component.spec.ts
+│   │           │   └── shadow-landing-page.component.ts
+│   │           ├── shadow-routing.module.ts
+│   │           ├── shadow.module.spec.ts
+│   │           └── shadow.module.ts
 │   ├── assets
+│   │   └── shadow-fight.png
 │   ├── browserslist
 │   ├── environments
 │   │   ├── environment.prod.ts
@@ -87,6 +145,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 │   ├── tsconfig.app.json
 │   ├── tsconfig.spec.json
 │   └── tslint.json
+├── tree.txt
 ├── tsconfig.json
 └── tslint.json
 
