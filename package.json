@@ -25,6 +25,7 @@
     "core-js": "^2.5.4",
     "grapesjs": "^0.14.25",
     "grapesjs-blocks-basic": "^0.1.8",
+    "grapesjs-blocks-flexbox": "^0.1.1",
     "grapesjs-plugin-button-event": "^0.0.5",
     "grapesjs-plugin-publish-s3": "^1.0.2",
     "grapesjs-plugin-s3": "^0.1.4",

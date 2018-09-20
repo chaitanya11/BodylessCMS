@@ -16,10 +16,10 @@ export class WebPageBuilderComponent implements OnInit {
     signOutEventEmitter = new EventEmitter();
     constructor(private _configService: ConfigService,
         private router: Router) {
-            this.signOutEventEmitter.on('gjs-signOut', data => {
-                this.router.navigateByUrl('/admin/logout');
-            });
-         }
+        this.signOutEventEmitter.on('gjs-signOut', data => {
+            this.router.navigateByUrl('/admin/logout');
+        });
+    }
 
     ngOnInit() {
         const isConfigured = this._configService.checkConfig();
@@ -37,7 +37,11 @@ export class WebPageBuilderComponent implements OnInit {
             container: '#gjs',
             components: '<div class="txt-red">Hello folks! Welcome to Bodyless CMS</div>',
             style: '.txt-red{color: blue}',
-            plugins: ['gjs-plugin-s3', 'gjs-blocks-basic', 'gjs-plugin-publish-s3', 'gjs-plugin-button-event'],
+            plugins: ['gjs-plugin-s3', 'gjs-blocks-basic',
+                'gjs-plugin-publish-s3',
+                'gjs-plugin-button-event',
+                'gjs-blocks-flexbox'
+            ],
             pluginsOpts: {
                 'gjs-plugin-s3': {
                     imgFormats: ["png", "jpeg", "jpg"],
@@ -64,7 +68,8 @@ export class WebPageBuilderComponent implements OnInit {
                         data: { message: 'Clear session.' },
                         eventEmitter: this.signOutEventEmitter
                     }]
-                }
+                },
+                'gjs-blocks-flexbox': {}
             }
         });
 
