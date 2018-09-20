@@ -153,9 +153,9 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 ## checkpoints
 * Webpack integration
-* ~~ S3 integration
-* ~~ Save Content designed from admin dashboard to S3.
-* ~~ Integrate cognito
+* ~~S3 integration~~
+* ~~Save Content designed from admin dashboard to S3.~~
+* ~~Integrate cognito~~
 * Render content from S3 and show in Public landing page.
 * Add security to application.
 * All other improvements (Themes, preview, different kinds of content, etc).
