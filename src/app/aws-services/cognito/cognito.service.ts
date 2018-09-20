@@ -5,7 +5,6 @@ import {
 } from 'amazon-cognito-identity-js';
 import * as AWS from 'aws-sdk';
 import { Config } from "../config";
-import { ConfigService } from "../config/config.service";
 
 @Injectable({
   providedIn: 'root'
@@ -15,6 +14,7 @@ export class CognitoService {
   userPoolId: string;
   clientId: string;
   identityPoolId: string;
+  cognitoUser: CognitoUser;
 
   constructor() {
     this.userPoolId = Config.userPoolId;
@@ -49,12 +49,12 @@ export class CognitoService {
         Password: password,
       });
 
-      const cognitoUser = new CognitoUser({
+      this.cognitoUser = new CognitoUser({
         Username: userName,
         Pool: this.userPool,
       });
 
-      cognitoUser.authenticateUser(authenticationDetails, {
+      this.cognitoUser.authenticateUser(authenticationDetails, {
         onSuccess: async (cognitoUserSession) => {
           console.log(cognitoUserSession);
           const result = await this.retriveKeys(cognitoUserSession);
@@ -95,5 +95,9 @@ export class CognitoService {
         resolve({ accessKeyId, secretAccessKey, sessionToken });
       });
     });
+  }
+
+  signOut() {
+    this.cognitoUser.signOut();
   }
 }

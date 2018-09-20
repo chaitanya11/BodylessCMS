@@ -18,8 +18,7 @@ export class ConfigService {
     }
 
   checkConfig() {
-    console.log(this.accessKeyId);
-    return [this.accessKeyId, this.secretAccessKey, this.sessionToken].some(
+    return [this.accessKeyId, this.secretAccessKey, this.sessionToken].every(
       (key) => key != undefined
     );
   }

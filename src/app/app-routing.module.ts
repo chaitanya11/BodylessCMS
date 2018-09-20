@@ -1,20 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LandingPageComponent } from './landing-page/landing-page.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: LandingPageComponent
+    pathMatch: 'full',
+    redirectTo: 'admin'
   },
   {
     path: 'admin',
     loadChildren: './admin/admin.module#AdminModule'
-  },
-  {
-    path: 'public',
-    loadChildren: './public/public.module#PublicModule'
   },
   { path: '**', component: PageNotFoundComponent }
 ];

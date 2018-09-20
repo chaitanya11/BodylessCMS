@@ -25,6 +25,9 @@ export class LoginComponent implements OnInit {
       const result = await this._cognitoService.login(this.userName, this.password);
       this._configService.setConfig(result['accessKeyId'], result['secretAccessKey'],
        result['sessionToken']);
+       localStorage.setItem('sessionToken', result['sessionToken']);
+       localStorage.setItem('accessKeyId', result['accessKeyId']);
+       localStorage.setItem('secretAccessKey', result['secretAccessKey']);
       this.router.navigateByUrl('admin');
     } catch (err) {
       console.error(err);
