@@ -1,0 +1,19 @@
+<div class="container-fluid">
+  <div class="signup-block">
+    <div class="row">
+      <div class="col-md-12">
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email" [(ngModel)]="email">
+      </div>
+      <div class="col-md-12">
+        <label for="username">Username</label>
+        <input type="text" name="userName" id="username" [(ngModel)]="userName">
+      </div>
+      <div class="col-md-12">
+        <label for="passoword">Password</label>
+        <input type="password" name="password" id="password" [(ngModel)]="password">
+      </div>
+      <button class="btn btn-primary" (click)="signup()">Signup</button>
+    </div>
+  </div>
+</div>

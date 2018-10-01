@@ -27,9 +27,21 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "./node_modules/grapesjs/dist/css/grapes.min.css",
+              "./node_modules/grapesjs-plugin-s3/dist/grapesjs-plugin-s3.css",
+              "./node_modules/grapesjs-plugin-publish-s3/dist/grapesjs-plugin-publish-s3.css",
+              "./node_modules/grapesjs-plugin-button-event/dist/grapesjs-plugin-button-event.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.min.js",
+              "./node_modules/grapesjs/dist/grapes.min.js",
+              "./node_modules/grapesjs-blocks-basic/dist/grapesjs-blocks-basic.min.js",
+              "./node_modules/grapesjs-plugin-s3/dist/grapesjs-plugin-s3.min.js",
+              "./node_modules/grapesjs-plugin-publish-s3/dist/grapesjs-plugin-publish-s3.min.js",
+              "./node_modules/grapesjs-plugin-button-event/dist/grapesjs-plugin-button-event.min.js",
+              "./node_modules/grapesjs-blocks-flexbox/dist/grapesjs-blocks-flexbox.min.js"
+            ]
           },
           "configurations": {
             "production": {
