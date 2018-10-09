@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ConfigService } from "../../aws-services/config/config.service";
 import { Router } from "@angular/router";
 import { EventEmitter } from "events";
+import {Config} from "../../aws-services/config/index"
 
 declare var grapesjs: any; // Important!
 
@@ -47,7 +48,7 @@ export class WebPageBuilderComponent implements OnInit {
             pluginsOpts: {
                 'gjs-plugin-s3': {
                     imgFormats: ["png", "jpeg", "jpg"],
-                    bucketName: "bodylesscms",
+                    bucketName: Config.bucketname,
                     prefix: "content/img/",
                     accessKeyId: this._configService.accessKeyId,
                     secretAccessKey: this._configService.secretAccessKey,
@@ -55,7 +56,7 @@ export class WebPageBuilderComponent implements OnInit {
                 },
                 'gjs-blocks-basic': {},
                 'gjs-plugin-publish-s3': {
-                    bucketName: "bodylesscms",
+                    bucketName: Config.bucketname,
                     accessKeyId: this._configService.accessKeyId,
                     secretAccessKey: this._configService.secretAccessKey,
                     sessionToken: this._configService.sessionToken
