@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from "@angular/router";
 import { CognitoService } from "../../aws-services/cognito/cognito.service";
 
 @Component({
@@ -12,7 +13,8 @@ export class SignupComponent implements OnInit {
   userName = '';
   password = '';
 
-  constructor(private _cognitoService: CognitoService) {
+  constructor(private _cognitoService: CognitoService,
+    private router: Router) {
 
    }
 
@@ -22,5 +24,7 @@ export class SignupComponent implements OnInit {
   signup() {
     console.log(this.email, this.userName, this.password);
     this._cognitoService.signup(this.userName, this.password, this.email);
+    console.log("Signup is completed, redirecting to login page ...");
+    this.router.navigateByUrl('admin/login');
   }
 }
