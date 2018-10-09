@@ -40,7 +40,8 @@
               "./node_modules/grapesjs-plugin-s3/dist/grapesjs-plugin-s3.min.js",
               "./node_modules/grapesjs-plugin-publish-s3/dist/grapesjs-plugin-publish-s3.min.js",
               "./node_modules/grapesjs-plugin-button-event/dist/grapesjs-plugin-button-event.min.js",
-              "./node_modules/grapesjs-blocks-flexbox/dist/grapesjs-blocks-flexbox.min.js"
+              "./node_modules/grapesjs-blocks-flexbox/dist/grapesjs-blocks-flexbox.min.js",
+              "./node_modules/grapesjs-custom-code/dist/grapesjs-custom-code.min.js"
             ]
           },
           "configurations": {

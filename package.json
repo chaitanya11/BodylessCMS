@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:prod" : "ng build --prod --aot --build-optimizer",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -26,6 +27,7 @@
     "grapesjs": "^0.14.25",
     "grapesjs-blocks-basic": "^0.1.8",
     "grapesjs-blocks-flexbox": "^0.1.1",
+    "grapesjs-custom-code": "^0.1.1",
     "grapesjs-plugin-button-event": "^0.0.5",
     "grapesjs-plugin-publish-s3": "^1.0.2",
     "grapesjs-plugin-s3": "^0.1.4",

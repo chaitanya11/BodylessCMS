@@ -33,14 +33,16 @@ export class WebPageBuilderComponent implements OnInit {
     }
 
     start() {
-        grapesjs.init({
+        const editor = grapesjs.init({
+            allowScripts: 1,
             container: '#gjs',
             components: '<div class="txt-red">Hello folks! Welcome to Bodyless CMS</div>',
             style: '.txt-red{color: blue}',
             plugins: ['gjs-plugin-s3', 'gjs-blocks-basic',
                 'gjs-plugin-publish-s3',
                 'gjs-plugin-button-event',
-                'gjs-blocks-flexbox'
+                'gjs-blocks-flexbox',
+                'grapesjs-custom-code'
             ],
             pluginsOpts: {
                 'gjs-plugin-s3': {
@@ -69,7 +71,8 @@ export class WebPageBuilderComponent implements OnInit {
                         eventEmitter: this.signOutEventEmitter
                     }]
                 },
-                'gjs-blocks-flexbox': {}
+                'gjs-blocks-flexbox': {},
+                'grapesjs-custom-code': {}
             }
         });
 
