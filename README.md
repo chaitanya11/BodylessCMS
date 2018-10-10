@@ -13,7 +13,7 @@ npm start
 Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Requirements
-* All the requirements can be created using [bodyless-cli]("https://github.com/chaitanya11/bodyless-cli"), if you want to created them manually create bellow mentioned aws resources.
+* All the requirements can be created using [cli](https://github.com/chaitanya11/bodyless-cli), if you want to created them manually create bellow mentioned aws resources.
 * Aws s3 bucket with name ```bodlylesscms``` and create a folder ```content/img``` have required images in this folder.
 * Aws cognito userpool and identity pool linked to that userpool.
 * Two roles for authenticated users and un-authenticated users.
