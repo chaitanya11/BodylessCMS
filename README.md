@@ -1,6 +1,6 @@
 # BodylessCMS
 
-BodylessCMS doesn't require any kind of Backend or database or any kind of third party api's, but can provide content management and scalability to any extent. The main objective of this project to cut down infrastructure cost and complexity of CMS. We already has a concept of [HeadlessCMS](https://en.wikipedia.org/wiki/Headless_CMS), which has plain user interface to serve content from third party api's. That requires reliable third party to store our content and cost for content management and for security of data. In BodylessCMS you just need AWS s3 to serve content and to manage website. Security has no issues, reliable and scalable to any extinct.
+BodylessCMS doesn't require any kind of Backend or database or any kind of third party api's, but can provide content management and scalability to any extent. The main objective of this project to cut down infrastructure cost and complexity of CMS. We already has a concept of [HeadlessCMS](https://en.wikipedia.org/wiki/Headless_CMS), which has plain user interface to serve content from third party api's. That requires reliable third party to store our content and cost for content management and for security of data. In BodylessCMS you just need AWS s3 to serve content and to manage website. Security has no issues, reliable and scalable to any extent.
 
 ## Running in local
 Have all the requirements ready before running application in local.
@@ -13,6 +13,7 @@ npm start
 Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Requirements
+* All the requirements can be created using [bodyless-cli]("https://github.com/chaitanya11/bodyless-cli"), if you want to created them manually create bellow mentioned aws resources.
 * Aws s3 bucket with name ```bodlylesscms``` and create a folder ```content/img``` have required images in this folder.
 * Aws cognito userpool and identity pool linked to that userpool.
 * Two roles for authenticated users and un-authenticated users.
