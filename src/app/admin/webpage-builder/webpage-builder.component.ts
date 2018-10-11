@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ConfigService } from "../../aws-services/config/config.service";
-import { Router } from "@angular/router";
+import { Router, ActivatedRoute } from "@angular/router";
 import { EventEmitter } from "events";
-import {Config} from "../../aws-services/config/index"
+import { Config } from "../../aws-services/config/index";
+import { HttpClient } from '@angular/common/http';
+import Theme from "../beans/theme.bean";
+import GrapesjsInit from "../grapesjs-config/initialization.config";
 
 declare var grapesjs: any; // Important!
 
@@ -14,12 +17,17 @@ declare var grapesjs: any; // Important!
     template: '<div id="gjs"></div>'
 })
 export class WebPageBuilderComponent implements OnInit {
-    signOutEventEmitter = new EventEmitter();
+    eventEmitter = new EventEmitter();
+    editor: any;
+    template: string;
     constructor(private _configService: ConfigService,
-        private router: Router) {
-        this.signOutEventEmitter.on('gjs-signOut', data => {
-            this.router.navigateByUrl('/admin/logout');
-        });
+        private router: Router,
+        private route: ActivatedRoute,
+        private http: HttpClient) {
+        // get template
+        this.template = this.route.snapshot.paramMap.get('template');
+        // register events.
+        this.registerEvents();
     }
 
     ngOnInit() {
@@ -33,49 +41,57 @@ export class WebPageBuilderComponent implements OnInit {
         }
     }
 
-    start() {
-        const editor = grapesjs.init({
-            allowScripts: 1,
-            container: '#gjs',
-            components: '<div class="txt-red">Hello folks! Welcome to Bodyless CMS</div>',
-            style: '.txt-red{color: blue}',
-            plugins: ['gjs-plugin-s3', 'gjs-blocks-basic',
-                'gjs-plugin-publish-s3',
-                'gjs-plugin-button-event',
-                'gjs-blocks-flexbox',
-                'grapesjs-custom-code'
-            ],
-            pluginsOpts: {
-                'gjs-plugin-s3': {
-                    imgFormats: ["png", "jpeg", "jpg"],
-                    bucketName: Config.bucketname,
-                    prefix: "content/img/",
-                    accessKeyId: this._configService.accessKeyId,
-                    secretAccessKey: this._configService.secretAccessKey,
-                    sessionToken: this._configService.sessionToken
-                },
-                'gjs-blocks-basic': {},
-                'gjs-plugin-publish-s3': {
-                    bucketName: Config.bucketname,
-                    accessKeyId: this._configService.accessKeyId,
-                    secretAccessKey: this._configService.secretAccessKey,
-                    sessionToken: this._configService.sessionToken
-                },
-                'gjs-plugin-button-event': {
-                    buttons: [{
-                        name: 'signOut',
-                        panel: 'options',
-                        eventName: 'gjs-signOut',
-                        icon: 'fa fa-sign-out',
-                        active: false,
-                        data: { message: 'Clear session.' },
-                        eventEmitter: this.signOutEventEmitter
-                    }]
-                },
-                'gjs-blocks-flexbox': {},
-                'grapesjs-custom-code': {}
-            }
+    registerEvents() {
+        this.eventEmitter.on('gjs-signOut', data => {
+            this.router.navigateByUrl('/admin/logout');
         });
+        this.eventEmitter.on('gjs-saveTemplate', data => {
+            // save template to aws.
+            console.log('save template');
+            this.saveTemplate();
+        });
+    }
 
+    async loadTheme(themeName: string): Promise<Theme> {
+        return new Promise<Theme>((resolve, reject) => {
+            // load template.
+            this.http.get<Theme>('/assets/themes/' + themeName + '.json').subscribe(
+                (res: Theme) => {
+                    console.log(res);
+                    resolve(res);
+                },
+                err => {
+                    // TODO on 404 redirect to admin page.
+                    console.error(err);
+                    reject(err);
+                }
+            );
+        });
+    }
+
+    async start() {
+        let selectedTheme = await this.loadTheme(this.template);
+        let grapesjsInitObject = GrapesjsInit.initializationTemplate(
+            Config.bucketname,
+            this._configService.accessKeyId,
+            this._configService.secretAccessKey,
+            this._configService.sessionToken,
+            this.eventEmitter,
+            selectedTheme.components,
+            selectedTheme.styles
+        );
+        this.editor = grapesjs.init(grapesjsInitObject);
+
+    }
+
+    saveTemplate() {
+        const components = this.editor.getComponents();
+        const style = this.editor.getStyle();
+        /**
+         * TODO save template.
+         * Steps
+         * Take screenshot of them designed theme.
+         * Upload the screenshot and new theme json to s3.
+         */
     }
 }

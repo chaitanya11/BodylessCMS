@@ -2,20 +2,20 @@
   <div class="row">
     <div class="col-md-6">
       <div class="custom-template-button">
-        <button class="btn btn-primary" [routerLink]="['webpagebuilder']">Create Own Template</button>
+        <button class="btn btn-primary" (click)="createNewTheme()">Create Own Template</button>
       </div>
     </div>
     <div class="col-md-6">
-      <div class="card template-card">
-        <img class="card-img-top" src="../../../assets/shadow-fight.png" alt="Card image">
-        <div class="card-body">
-          <h4 class="card-title">Shadow Template</h4>
-          <p class="card-text">A dark theme.</p>
-          <a [routerLink]="['shdowTheme']" class="btn btn-primary">Use template</a>
+      <div *ngFor="let theme of themes">
+        <div class="card template-card">
+          <img class="card-img-top" src={{theme.image}} alt="Card image">
+          <div class="card-body">
+            <h4 class="card-title">{{theme.name}}</h4>
+            <p class="card-text">{{theme.description}}</p>
+            <a [routerLink]="['webpagebuilder/'+theme.image]" class="btn btn-primary">Use theme</a>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-<!-- ./admin/admin.module#AdminModule -->
