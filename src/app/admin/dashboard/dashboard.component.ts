@@ -1,6 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Validators, FormBuilder } from '@angular/forms';
 import ThemeMap from "../beans/thememap.bean";
+import Theme from "../beans/theme.bean";
+import ThemeConstants from "../constants/theme.constants";
+import { S3Service } from "../../services/aws/s3/s3.service";
+import { Config } from "../../services/aws/config/index";
+import { Router } from '@angular/router';
+import { ThemeService } from "../../services/themes/theme.service";
+
+declare var $: any;
 
 @Component({
   selector: 'app-dashboard',
@@ -8,15 +16,27 @@ import ThemeMap from "../beans/thememap.bean";
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-  themes: Array<ThemeMap> = [];
+  themeMappings: Array<ThemeMap> = [];
+  createThemeForm: any;
+  emptyImg = '../../../assets/empty.png';
+  ngBucketName = 'ng-' + Config.bucketname;
 
-  constructor(private http: HttpClient) { }
+  constructor(
+    private fb: FormBuilder,
+    private _s3Service: S3Service,
+    private router: Router,
+    private _themeService: ThemeService) {
+    this.createThemeForm = this.fb.group({
+      themeName: ['', Validators.required],
+      themeDescription: ['', Validators.required]
+    });
+  }
 
   ngOnInit() {
     this.listAvailableTemplates();
   }
 
-  createNewTheme() {
+  async createNewTheme() {
     /**
      * TODO create new theme.
      * Steps:
@@ -25,8 +45,30 @@ export class DashboardComponent implements OnInit {
      * Add that to themeMap.json and put in s3.
      * Redirect to webpagebuilder with given template name.
      */
-
     console.log('create new theme.');
+    let themeName = this.createThemeForm.value.themeName;
+    let themeFileName = ThemeConstants.THEME_FILE_PREFIX + themeName + '.json';
+    let newThemeMapping = new ThemeMap(themeName,
+      this.emptyImg,
+      this.createThemeForm.value.themeDescription);
+    let newTheme = new Theme(ThemeConstants.NEW_GRAPESJS_COMPONENTS,
+      ThemeConstants.NEW_GRAPESJS_STYLES);
+    this.themeMappings.push(newThemeMapping);
+    await this._s3Service.putObject(
+      JSON.stringify(newTheme),
+      themeFileName,
+      this.ngBucketName,
+      "application/json"
+    );
+    await this._s3Service.putObject(
+      JSON.stringify(this.themeMappings),
+      ThemeConstants.THEME_MAPPING_FILE_NAME,
+      this.ngBucketName,
+      "application/json"
+    );
+    $('#createThemeModalClose').click();
+    // redirecting to new theme page.
+    this.router.navigateByUrl('admin/webpagebuilder/' + themeName);
   }
 
   listAvailableTemplates() {
@@ -34,9 +76,9 @@ export class DashboardComponent implements OnInit {
      * Check for themeMap.json file in assets/themes folder.
      * List all the themes got in the response.
      */
-    this.http.get<Array<ThemeMap>>('/assets/themes/themeMap.json').subscribe(
-      (res:Array<ThemeMap>) => {
-        this.themes = res;
+    this._themeService.listAvailableTemplates().subscribe(
+      (res: Array<ThemeMap>) => {
+        this.themeMappings = res;
       },
       err => {
         // TODO something went wrong.

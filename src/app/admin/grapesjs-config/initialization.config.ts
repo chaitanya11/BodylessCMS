@@ -1,3 +1,4 @@
+import ThemeConstants from "../constants/theme.constants";
 export default class GrapesjsInit {
     public static initializationTemplate = (bucketname,
         accessKeyId,
@@ -20,8 +21,8 @@ export default class GrapesjsInit {
             pluginsOpts: {
                 'gjs-plugin-s3': {
                     imgFormats: ["png", "jpeg", "jpg"],
-                    bucketName: bucketname,
-                    prefix: "content/img/",
+                    bucketName: bucketname, // should be ng code bucket.
+                    prefix: "content/img/", // FIXME should be assets/img/
                     accessKeyId: accessKeyId,
                     secretAccessKey: secretAccessKey,
                     sessionToken: sessionToken
@@ -66,8 +67,8 @@ export default class GrapesjsInit {
         secretAccessKey, 
         sessionToken,
         eventEmitter) => {
-        let components = '<div class="txt-red">Hello folks! Welcome to Bodyless CMS</div>';
-        let styles = '.txt-red{color: blue}';
+        let components = ThemeConstants.NEW_GRAPESJS_COMPONENTS;
+        let styles = ThemeConstants.NEW_GRAPESJS_STYLES;
         let result = GrapesjsInit.initializationTemplate(
             bucketname,
             accessKeyId,

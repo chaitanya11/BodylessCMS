@@ -2,11 +2,13 @@
   <div class="row">
     <div class="col-md-6">
       <div class="custom-template-button">
-        <button class="btn btn-primary" (click)="createNewTheme()">Create Own Template</button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createNewTheme">
+          Create Own Template
+        </button>
       </div>
     </div>
     <div class="col-md-6">
-      <div *ngFor="let theme of themes">
+      <div *ngFor="let theme of themeMappings">
         <div class="card template-card">
           <img class="card-img-top" src={{theme.image}} alt="Card image">
           <div class="card-body">
@@ -16,6 +18,43 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- The Modal -->
+<div class="modal" id="createNewTheme">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <div class="row">
+          <div class="col-md-11">
+            <h4 class="modal-title">Create New Theme</h4>
+          </div>
+          <div class="col-md-1">
+            <button type="button" class="close" data-dismiss="modal" id="createThemeModalClose">&times;</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <form [formGroup]="createThemeForm">
+          <label for="themeName">Theme Name:</label>
+          <input type="text" class="form-control" formControlName="themeName" id="themeName">
+          <label for="themeDescription">Theme Description:</label>
+          <input type="text" class="form-control" formControlName="themeDescription" id="themeDescription">
+        </form>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" (click)="createNewTheme()" [disabled]="!createThemeForm.valid">Create</button>
+      </div>
+
     </div>
   </div>
 </div>

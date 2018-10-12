@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
-import { CognitoService } from "../../aws-services/cognito/cognito.service";
+import { CognitoService } from "../../services/aws/cognito/cognito.service";
 
 @Component({
   selector: 'app-signup',

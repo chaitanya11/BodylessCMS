@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, Router } from '@angular/router';
 import { Observable } from 'rxjs';
-import { ConfigService } from "../aws-services/config/config.service";
+import { ConfigService } from "../services/aws/config/config.service";
 
 
 @Injectable({
