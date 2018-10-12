@@ -14,13 +14,13 @@ const routes: Routes = [
     component: DashboardComponent,
     canActivate: [AuthGuard]
   },
+  // {
+  //   path: 'shdowTheme',
+  //   loadChildren: '../themes/shadow/shadow.module#ShadowModule',
+  //   canActivate: [AuthGuard]
+  // },
   {
-    path: 'shdowTheme',
-    loadChildren: '../themes/shadow/shadow.module#ShadowModule',
-    canActivate: [AuthGuard]
-  },
-  {
-    path: 'webpagebuilder',
+    path: 'webpagebuilder/:template',
     component: WebPageBuilderComponent,
     canActivate: [AuthGuard],
     // resolve: {

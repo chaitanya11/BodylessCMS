@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import * as AWS from 'aws-sdk';
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +13,11 @@ export class ConfigService {
     secretAccessKey: string,
     sessionToken: string) {
       console.log('setting config', accessKeyId);
+      AWS.config.update({
+        accessKeyId: accessKeyId,
+        secretAccessKey: secretAccessKey,
+        sessionToken: sessionToken
+      })
       this.accessKeyId = accessKeyId;
       this.secretAccessKey = secretAccessKey;
       this.sessionToken = sessionToken;

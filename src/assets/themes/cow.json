@@ -1,0 +1,2501 @@
+{
+    "components" : [
+        {
+            "tagName": "div",
+            "type": "",
+            "name": "Row",
+            "removable": true,
+            "draggable": true,
+            "droppable": ".gjs-cell",
+            "badgable": true,
+            "stylable": true,
+            "stylable-require": "",
+            "unstylable": "",
+            "highlightable": true,
+            "copyable": true,
+            "resizable": {
+                "tl": 0,
+                "tc": 0,
+                "tr": 0,
+                "cl": 0,
+                "cr": 0,
+                "bl": 0,
+                "br": 0,
+                "minDim": 1
+            },
+            "editable": false,
+            "layerable": true,
+            "selectable": true,
+            "hoverable": true,
+            "void": false,
+            "state": "",
+            "status": "",
+            "content": "",
+            "icon": "",
+            "style": "",
+            "attributes": {},
+            "classes": [
+                {
+                    "name": "gjs-row",
+                    "label": "gjs-row",
+                    "type": 1,
+                    "active": true,
+                    "private": 1,
+                    "protected": false
+                }
+            ],
+            "script": "",
+            "traits": [
+                {
+                    "type": "text",
+                    "label": "",
+                    "name": "id",
+                    "min": "",
+                    "max": "",
+                    "unit": "",
+                    "step": 1,
+                    "value": "",
+                    "default": "",
+                    "placeholder": "eg. Text here",
+                    "changeProp": 0,
+                    "options": []
+                },
+                {
+                    "type": "text",
+                    "label": "",
+                    "name": "title",
+                    "min": "",
+                    "max": "",
+                    "unit": "",
+                    "step": 1,
+                    "value": "",
+                    "default": "",
+                    "placeholder": "eg. Text here",
+                    "changeProp": 0,
+                    "options": []
+                }
+            ],
+            "propagate": "",
+            "components": [
+                {
+                    "tagName": "div",
+                    "type": "",
+                    "name": "Cell",
+                    "removable": true,
+                    "draggable": ".gjs-row",
+                    "droppable": true,
+                    "badgable": true,
+                    "stylable": true,
+                    "stylable-require": "",
+                    "unstylable": "",
+                    "highlightable": true,
+                    "copyable": true,
+                    "resizable": {
+                        "tl": 0,
+                        "tc": 0,
+                        "tr": 0,
+                        "cl": 0,
+                        "cr": 1,
+                        "bl": 0,
+                        "br": 0,
+                        "minDim": 1,
+                        "bc": 0,
+                        "currentUnit": 1,
+                        "step": 0.2
+                    },
+                    "editable": false,
+                    "layerable": true,
+                    "selectable": true,
+                    "hoverable": true,
+                    "void": false,
+                    "state": "",
+                    "status": "",
+                    "content": "",
+                    "icon": "",
+                    "style": "",
+                    "attributes": {},
+                    "classes": [
+                        {
+                            "name": "gjs-cell",
+                            "label": "gjs-cell",
+                            "type": 1,
+                            "active": true,
+                            "private": 1,
+                            "protected": false
+                        }
+                    ],
+                    "script": "",
+                    "traits": [
+                        {
+                            "type": "text",
+                            "label": "",
+                            "name": "id",
+                            "min": "",
+                            "max": "",
+                            "unit": "",
+                            "step": 1,
+                            "value": "",
+                            "default": "",
+                            "placeholder": "eg. Text here",
+                            "changeProp": 0,
+                            "options": []
+                        },
+                        {
+                            "type": "text",
+                            "label": "",
+                            "name": "title",
+                            "min": "",
+                            "max": "",
+                            "unit": "",
+                            "step": 1,
+                            "value": "",
+                            "default": "",
+                            "placeholder": "eg. Text here",
+                            "changeProp": 0,
+                            "options": []
+                        }
+                    ],
+                    "propagate": "",
+                    "components": [
+                        {
+                            "tagName": "div",
+                            "type": "text",
+                            "name": "",
+                            "removable": true,
+                            "draggable": true,
+                            "droppable": false,
+                            "badgable": true,
+                            "stylable": true,
+                            "stylable-require": "",
+                            "unstylable": "",
+                            "highlightable": true,
+                            "copyable": true,
+                            "resizable": false,
+                            "editable": true,
+                            "layerable": true,
+                            "selectable": true,
+                            "hoverable": true,
+                            "void": false,
+                            "state": "",
+                            "status": "selected",
+                            "content": "",
+                            "icon": "",
+                            "style": {},
+                            "attributes": {},
+                            "classes": [
+                                {
+                                    "name": "c2822",
+                                    "label": "c2822",
+                                    "type": 1,
+                                    "active": true,
+                                    "private": false,
+                                    "protected": false
+                                }
+                            ],
+                            "script": "",
+                            "traits": [
+                                {
+                                    "type": "text",
+                                    "label": "",
+                                    "name": "id",
+                                    "min": "",
+                                    "max": "",
+                                    "unit": "",
+                                    "step": 1,
+                                    "value": "",
+                                    "default": "",
+                                    "placeholder": "eg. Text here",
+                                    "changeProp": 0,
+                                    "options": []
+                                },
+                                {
+                                    "type": "text",
+                                    "label": "",
+                                    "name": "title",
+                                    "min": "",
+                                    "max": "",
+                                    "unit": "",
+                                    "step": 1,
+                                    "value": "",
+                                    "default": "",
+                                    "placeholder": "eg. Text here",
+                                    "changeProp": 0,
+                                    "options": []
+                                }
+                            ],
+                            "propagate": "",
+                            "activeOnRender": 0,
+                            "components": [
+                                {
+                                    "tagName": "",
+                                    "type": "textnode",
+                                    "name": "",
+                                    "removable": 0,
+                                    "draggable": 0,
+                                    "droppable": false,
+                                    "badgable": true,
+                                    "stylable": true,
+                                    "stylable-require": "",
+                                    "unstylable": "",
+                                    "highlightable": 0,
+                                    "copyable": 0,
+                                    "resizable": false,
+                                    "editable": 0,
+                                    "layerable": true,
+                                    "selectable": true,
+                                    "hoverable": true,
+                                    "void": false,
+                                    "state": "",
+                                    "status": "",
+                                    "content": "COW LOREM IPSUM",
+                                    "icon": "",
+                                    "style": "",
+                                    "attributes": {},
+                                    "classes": [],
+                                    "script": "",
+                                    "traits": [
+                                        {
+                                            "type": "text",
+                                            "label": "",
+                                            "name": "id",
+                                            "min": "",
+                                            "max": "",
+                                            "unit": "",
+                                            "step": 1,
+                                            "value": "",
+                                            "default": "",
+                                            "placeholder": "eg. Text here",
+                                            "changeProp": 0,
+                                            "options": []
+                                        },
+                                        {
+                                            "type": "text",
+                                            "label": "",
+                                            "name": "title",
+                                            "min": "",
+                                            "max": "",
+                                            "unit": "",
+                                            "step": 1,
+                                            "value": "",
+                                            "default": "",
+                                            "placeholder": "eg. Text here",
+                                            "changeProp": 0,
+                                            "options": []
+                                        }
+                                    ],
+                                    "propagate": "",
+                                    "components": []
+                                }
+                            ],
+                            "open": 0
+                        }
+                    ],
+                    "open": true
+                }
+            ],
+            "open": true
+        },
+        {
+            "tagName": "div",
+            "type": "",
+            "name": "",
+            "removable": true,
+            "draggable": true,
+            "droppable": ".cell",
+            "badgable": true,
+            "stylable": true,
+            "stylable-require": "",
+            "unstylable": "",
+            "highlightable": true,
+            "copyable": true,
+            "resizable": {
+                "tl": 0,
+                "tc": 0,
+                "tr": 0,
+                "cl": 0,
+                "cr": 0,
+                "bl": 0,
+                "br": 0,
+                "minDim": 1
+            },
+            "editable": false,
+            "layerable": true,
+            "selectable": true,
+            "hoverable": true,
+            "void": false,
+            "state": "",
+            "status": "",
+            "content": "",
+            "icon": "",
+            "style": "",
+            "attributes": {},
+            "classes": [
+                {
+                    "name": "row",
+                    "label": "row",
+                    "type": 1,
+                    "active": true,
+                    "private": 1,
+                    "protected": false
+                }
+            ],
+            "script": "",
+            "traits": [
+                {
+                    "type": "text",
+                    "label": "",
+                    "name": "id",
+                    "min": "",
+                    "max": "",
+                    "unit": "",
+                    "step": 1,
+                    "value": "",
+                    "default": "",
+                    "placeholder": "eg. Text here",
+                    "changeProp": 0,
+                    "options": []
+                },
+                {
+                    "type": "text",
+                    "label": "",
+                    "name": "title",
+                    "min": "",
+                    "max": "",
+                    "unit": "",
+                    "step": 1,
+                    "value": "",
+                    "default": "",
+                    "placeholder": "eg. Text here",
+                    "changeProp": 0,
+                    "options": []
+                }
+            ],
+            "propagate": "",
+            "custom-name": "Row",
+            "components": [
+                {
+                    "tagName": "div",
+                    "type": "",
+                    "name": "",
+                    "removable": true,
+                    "draggable": ".row",
+                    "droppable": true,
+                    "badgable": true,
+                    "stylable": true,
+                    "stylable-require": [
+                        "flex-basis"
+                    ],
+                    "unstylable": [
+                        "width"
+                    ],
+                    "highlightable": true,
+                    "copyable": true,
+                    "resizable": {
+                        "tl": 0,
+                        "tc": 0,
+                        "tr": 0,
+                        "cl": 0,
+                        "cr": 1,
+                        "bl": 0,
+                        "br": 0,
+                        "minDim": 1,
+                        "bc": 0,
+                        "keyWidth": "flex-basis",
+                        "currentUnit": 1,
+                        "step": 0.2
+                    },
+                    "editable": false,
+                    "layerable": true,
+                    "selectable": true,
+                    "hoverable": true,
+                    "void": false,
+                    "state": "",
+                    "status": "",
+                    "content": "",
+                    "icon": "",
+                    "style": "",
+                    "attributes": {},
+                    "classes": [
+                        {
+                            "name": "cell",
+                            "label": "cell",
+                            "type": 1,
+                            "active": true,
+                            "private": 1,
+                            "protected": false
+                        }
+                    ],
+                    "script": "",
+                    "traits": [
+                        {
+                            "type": "text",
+                            "label": "",
+                            "name": "id",
+                            "min": "",
+                            "max": "",
+                            "unit": "",
+                            "step": 1,
+                            "value": "",
+                            "default": "",
+                            "placeholder": "eg. Text here",
+                            "changeProp": 0,
+                            "options": []
+                        },
+                        {
+                            "type": "text",
+                            "label": "",
+                            "name": "title",
+                            "min": "",
+                            "max": "",
+                            "unit": "",
+                            "step": 1,
+                            "value": "",
+                            "default": "",
+                            "placeholder": "eg. Text here",
+                            "changeProp": 0,
+                            "options": []
+                        }
+                    ],
+                    "propagate": "",
+                    "custom-name": "Column",
+                    "components": [
+                        {
+                            "tagName": "img",
+                            "type": "image",
+                            "name": "",
+                            "removable": true,
+                            "draggable": true,
+                            "droppable": 0,
+                            "badgable": true,
+                            "stylable": true,
+                            "stylable-require": "",
+                            "unstylable": "",
+                            "highlightable": 0,
+                            "copyable": true,
+                            "resizable": 1,
+                            "editable": 1,
+                            "layerable": true,
+                            "selectable": true,
+                            "hoverable": true,
+                            "void": true,
+                            "state": "",
+                            "status": "",
+                            "content": "",
+                            "icon": "",
+                            "style": {},
+                            "attributes": {
+                                "src": "https://bodyless.s3.amazonaws.com/content/img/cow.png"
+                            },
+                            "classes": [
+                                {
+                                    "name": "c2530",
+                                    "label": "c2530",
+                                    "type": 1,
+                                    "active": true,
+                                    "private": false,
+                                    "protected": false
+                                }
+                            ],
+                            "script": "",
+                            "traits": [
+                                {
+                                    "type": "text",
+                                    "label": "",
+                                    "name": "alt",
+                                    "min": "",
+                                    "max": "",
+                                    "unit": "",
+                                    "step": 1,
+                                    "value": "",
+                                    "default": "",
+                                    "placeholder": "eg. Text here",
+                                    "changeProp": 0,
+                                    "options": []
+                                }
+                            ],
+                            "propagate": "",
+                            "src": "https://bodyless.s3.amazonaws.com/content/img/cow.png",
+                            "file": "",
+                            "activeOnRender": 0,
+                            "components": [],
+                            "open": false
+                        }
+                    ],
+                    "open": false
+                },
+                {
+                    "tagName": "div",
+                    "type": "",
+                    "name": "",
+                    "removable": true,
+                    "draggable": ".row",
+                    "droppable": true,
+                    "badgable": true,
+                    "stylable": true,
+                    "stylable-require": [
+                        "flex-basis"
+                    ],
+                    "unstylable": [
+                        "width"
+                    ],
+                    "highlightable": true,
+                    "copyable": true,
+                    "resizable": {
+                        "tl": 0,
+                        "tc": 0,
+                        "tr": 0,
+                        "cl": 0,
+                        "cr": 1,
+                        "bl": 0,
+                        "br": 0,
+                        "minDim": 1,
+                        "bc": 0,
+                        "keyWidth": "flex-basis",
+                        "currentUnit": 1,
+                        "step": 0.2
+                    },
+                    "editable": false,
+                    "layerable": true,
+                    "selectable": true,
+                    "hoverable": true,
+                    "void": false,
+                    "state": "",
+                    "status": "",
+                    "content": "",
+                    "icon": "",
+                    "style": "",
+                    "attributes": {},
+                    "classes": [
+                        {
+                            "name": "cell",
+                            "label": "cell",
+                            "type": 1,
+                            "active": true,
+                            "private": 1,
+                            "protected": false
+                        }
+                    ],
+                    "script": "",
+                    "traits": [
+                        {
+                            "type": "text",
+                            "label": "",
+                            "name": "id",
+                            "min": "",
+                            "max": "",
+                            "unit": "",
+                            "step": 1,
+                            "value": "",
+                            "default": "",
+                            "placeholder": "eg. Text here",
+                            "changeProp": 0,
+                            "options": []
+                        },
+                        {
+                            "type": "text",
+                            "label": "",
+                            "name": "title",
+                            "min": "",
+                            "max": "",
+                            "unit": "",
+                            "step": 1,
+                            "value": "",
+                            "default": "",
+                            "placeholder": "eg. Text here",
+                            "changeProp": 0,
+                            "options": []
+                        }
+                    ],
+                    "propagate": "",
+                    "custom-name": "Column",
+                    "components": [
+                        {
+                            "tagName": "div",
+                            "type": "text",
+                            "name": "",
+                            "removable": true,
+                            "draggable": true,
+                            "droppable": false,
+                            "badgable": true,
+                            "stylable": true,
+                            "stylable-require": "",
+                            "unstylable": "",
+                            "highlightable": true,
+                            "copyable": true,
+                            "resizable": false,
+                            "editable": true,
+                            "layerable": true,
+                            "selectable": true,
+                            "hoverable": true,
+                            "void": false,
+                            "state": "",
+                            "status": "",
+                            "content": "",
+                            "icon": "",
+                            "style": {},
+                            "attributes": {},
+                            "classes": [
+                                {
+                                    "name": "c2606",
+                                    "label": "c2606",
+                                    "type": 1,
+                                    "active": true,
+                                    "private": false,
+                                    "protected": false
+                                }
+                            ],
+                            "script": "",
+                            "traits": [
+                                {
+                                    "type": "text",
+                                    "label": "",
+                                    "name": "id",
+                                    "min": "",
+                                    "max": "",
+                                    "unit": "",
+                                    "step": 1,
+                                    "value": "",
+                                    "default": "",
+                                    "placeholder": "eg. Text here",
+                                    "changeProp": 0,
+                                    "options": []
+                                },
+                                {
+                                    "type": "text",
+                                    "label": "",
+                                    "name": "title",
+                                    "min": "",
+                                    "max": "",
+                                    "unit": "",
+                                    "step": 1,
+                                    "value": "",
+                                    "default": "",
+                                    "placeholder": "eg. Text here",
+                                    "changeProp": 0,
+                                    "options": []
+                                }
+                            ],
+                            "propagate": "",
+                            "activeOnRender": 0,
+                            "components": [
+                                {
+                                    "tagName": "p",
+                                    "type": "text",
+                                    "name": "",
+                                    "removable": 0,
+                                    "draggable": 0,
+                                    "droppable": false,
+                                    "badgable": true,
+                                    "stylable": true,
+                                    "stylable-require": "",
+                                    "unstylable": "",
+                                    "highlightable": 0,
+                                    "copyable": 0,
+                                    "resizable": false,
+                                    "editable": 0,
+                                    "layerable": true,
+                                    "selectable": true,
+                                    "hoverable": true,
+                                    "void": false,
+                                    "state": "",
+                                    "status": "",
+                                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu massa viverra, dignissim tortor quis, semper metus. Cras sit amet purus arcu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean suscipit sed quam nec mollis. Phasellus ut augue et ante mollis pellentesque ac eu lectus. Duis et purus fermentum, euismod nibh ac, congue velit. Donec pulvinar, magna sit amet congue semper, arcu urna ullamcorper eros, nec ultrices nibh risus id odio. Etiam egestas felis vitae bibendum semper. Nam imperdiet odio vel urna facilisis venenatis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc fringilla odio ut tempor scelerisque. Fusce a suscipit ex, mollis vehicula sem. Nam eget lacus efficitur urna dapibus interdum vel sed elit. Curabitur hendrerit velit sit amet pellentesque malesuada. Morbi id ligula nunc.",
+                                    "icon": "",
+                                    "style": {},
+                                    "attributes": {},
+                                    "classes": [
+                                        {
+                                            "name": "c2625",
+                                            "label": "c2625",
+                                            "type": 1,
+                                            "active": true,
+                                            "private": false,
+                                            "protected": false
+                                        }
+                                    ],
+                                    "script": "",
+                                    "traits": [
+                                        {
+                                            "type": "text",
+                                            "label": "",
+                                            "name": "id",
+                                            "min": "",
+                                            "max": "",
+                                            "unit": "",
+                                            "step": 1,
+                                            "value": "",
+                                            "default": "",
+                                            "placeholder": "eg. Text here",
+                                            "changeProp": 0,
+                                            "options": []
+                                        },
+                                        {
+                                            "type": "text",
+                                            "label": "",
+                                            "name": "title",
+                                            "min": "",
+                                            "max": "",
+                                            "unit": "",
+                                            "step": 1,
+                                            "value": "",
+                                            "default": "",
+                                            "placeholder": "eg. Text here",
+                                            "changeProp": 0,
+                                            "options": []
+                                        }
+                                    ],
+                                    "propagate": "",
+                                    "components": [],
+                                    "open": false
+                                },
+                                {
+                                    "tagName": "p",
+                                    "type": "text",
+                                    "name": "",
+                                    "removable": 0,
+                                    "draggable": 0,
+                                    "droppable": false,
+                                    "badgable": true,
+                                    "stylable": true,
+                                    "stylable-require": "",
+                                    "unstylable": "",
+                                    "highlightable": 0,
+                                    "copyable": 0,
+                                    "resizable": false,
+                                    "editable": 0,
+                                    "layerable": true,
+                                    "selectable": true,
+                                    "hoverable": true,
+                                    "void": false,
+                                    "state": "",
+                                    "status": "",
+                                    "content": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec consectetur dui nec condimentum sodales. Sed facilisis ac est at vehicula. Ut rhoncus, nulla in pulvinar interdum, quam sapien placerat magna, a porttitor quam magna vel ipsum. Sed dapibus auctor ultrices. Curabitur et sollicitudin nulla, non tempor nunc. Aliquam aliquam tellus nibh, a feugiat risus pharetra ut. Vestibulum tempor elit et rutrum tincidunt. Sed ac tempor odio. Nulla facilisi. Fusce odio metus, hendrerit lobortis purus eu, congue congue odio. Vestibulum tincidunt, justo eget ullamcorper vehicula, dolor erat porttitor lacus, in placerat justo nulla vitae elit. Proin sed ex nisl. Phasellus congue consequat pellentesque. Vivamus laoreet magna eget sodales tempus.",
+                                    "icon": "",
+                                    "style": {},
+                                    "attributes": {},
+                                    "classes": [
+                                        {
+                                            "name": "c2634",
+                                            "label": "c2634",
+                                            "type": 1,
+                                            "active": true,
+                                            "private": false,
+                                            "protected": false
+                                        }
+                                    ],
+                                    "script": "",
+                                    "traits": [
+                                        {
+                                            "type": "text",
+                                            "label": "",
+                                            "name": "id",
+                                            "min": "",
+                                            "max": "",
+                                            "unit": "",
+                                            "step": 1,
+                                            "value": "",
+                                            "default": "",
+                                            "placeholder": "eg. Text here",
+                                            "changeProp": 0,
+                                            "options": []
+                                        },
+                                        {
+                                            "type": "text",
+                                            "label": "",
+                                            "name": "title",
+                                            "min": "",
+                                            "max": "",
+                                            "unit": "",
+                                            "step": 1,
+                                            "value": "",
+                                            "default": "",
+                                            "placeholder": "eg. Text here",
+                                            "changeProp": 0,
+                                            "options": []
+                                        }
+                                    ],
+                                    "propagate": "",
+                                    "components": [],
+                                    "open": false
+                                },
+                                {
+                                    "tagName": "p",
+                                    "type": "text",
+                                    "name": "",
+                                    "removable": 0,
+                                    "draggable": 0,
+                                    "droppable": false,
+                                    "badgable": true,
+                                    "stylable": true,
+                                    "stylable-require": "",
+                                    "unstylable": "",
+                                    "highlightable": 0,
+                                    "copyable": 0,
+                                    "resizable": false,
+                                    "editable": 0,
+                                    "layerable": true,
+                                    "selectable": true,
+                                    "hoverable": true,
+                                    "void": false,
+                                    "state": "",
+                                    "status": "",
+                                    "content": "Donec velit augue, tempus ac lorem et, ultricies interdum massa. Praesent in magna diam. Praesent vehicula nulla sed ex dictum facilisis. Quisque feugiat in nisi tempus mattis. Maecenas tempus gravida quam quis sagittis. Aenean varius, ipsum a pulvinar ultrices, dolor enim ultricies augue, ac suscipit augue odio eget nisl. Phasellus ut dolor risus. Praesent a auctor nulla. Etiam quis nunc quis arcu tincidunt semper. Pellentesque eu ante in augue pulvinar egestas a vitae magna. Ut gravida aliquet tortor, sed suscipit erat iaculis ut.",
+                                    "icon": "",
+                                    "style": {},
+                                    "attributes": {},
+                                    "classes": [
+                                        {
+                                            "name": "c2643",
+                                            "label": "c2643",
+                                            "type": 1,
+                                            "active": true,
+                                            "private": false,
+                                            "protected": false
+                                        }
+                                    ],
+                                    "script": "",
+                                    "traits": [
+                                        {
+                                            "type": "text",
+                                            "label": "",
+                                            "name": "id",
+                                            "min": "",
+                                            "max": "",
+                                            "unit": "",
+                                            "step": 1,
+                                            "value": "",
+                                            "default": "",
+                                            "placeholder": "eg. Text here",
+                                            "changeProp": 0,
+                                            "options": []
+                                        },
+                                        {
+                                            "type": "text",
+                                            "label": "",
+                                            "name": "title",
+                                            "min": "",
+                                            "max": "",
+                                            "unit": "",
+                                            "step": 1,
+                                            "value": "",
+                                            "default": "",
+                                            "placeholder": "eg. Text here",
+                                            "changeProp": 0,
+                                            "options": []
+                                        }
+                                    ],
+                                    "propagate": "",
+                                    "components": [],
+                                    "open": false
+                                },
+                                {
+                                    "tagName": "p",
+                                    "type": "text",
+                                    "name": "",
+                                    "removable": 0,
+                                    "draggable": 0,
+                                    "droppable": false,
+                                    "badgable": true,
+                                    "stylable": true,
+                                    "stylable-require": "",
+                                    "unstylable": "",
+                                    "highlightable": 0,
+                                    "copyable": 0,
+                                    "resizable": false,
+                                    "editable": 0,
+                                    "layerable": true,
+                                    "selectable": true,
+                                    "hoverable": true,
+                                    "void": false,
+                                    "state": "",
+                                    "status": "",
+                                    "content": "Suspendisse elementum augue a velit rhoncus hendrerit. Duis ultricies erat vitae est semper feugiat. Donec tempor enim eget aliquet consectetur. Nam sit amet porttitor dui, eget dignissim tortor. Nullam arcu nisi, venenatis dictum nibh ultricies, posuere tempor nisl. Suspendisse pellentesque, justo quis vulputate tincidunt, nunc dolor gravida lacus, non accumsan arcu turpis eu neque. Donec efficitur ac justo vitae tristique. Pellentesque risus risus, tristique sit amet dignissim eu, volutpat in tellus. Nunc vestibulum vestibulum eros a iaculis. Proin quis ornare libero. Nulla hendrerit nisi tortor, aliquam sagittis arcu pharetra eget.",
+                                    "icon": "",
+                                    "style": {},
+                                    "attributes": {},
+                                    "classes": [
+                                        {
+                                            "name": "c2652",
+                                            "label": "c2652",
+                                            "type": 1,
+                                            "active": true,
+                                            "private": false,
+                                            "protected": false
+                                        }
+                                    ],
+                                    "script": "",
+                                    "traits": [
+                                        {
+                                            "type": "text",
+                                            "label": "",
+                                            "name": "id",
+                                            "min": "",
+                                            "max": "",
+                                            "unit": "",
+                                            "step": 1,
+                                            "value": "",
+                                            "default": "",
+                                            "placeholder": "eg. Text here",
+                                            "changeProp": 0,
+                                            "options": []
+                                        },
+                                        {
+                                            "type": "text",
+                                            "label": "",
+                                            "name": "title",
+                                            "min": "",
+                                            "max": "",
+                                            "unit": "",
+                                            "step": 1,
+                                            "value": "",
+                                            "default": "",
+                                            "placeholder": "eg. Text here",
+                                            "changeProp": 0,
+                                            "options": []
+                                        }
+                                    ],
+                                    "propagate": "",
+                                    "components": [],
+                                    "open": false
+                                },
+                                {
+                                    "tagName": "p",
+                                    "type": "text",
+                                    "name": "",
+                                    "removable": 0,
+                                    "draggable": 0,
+                                    "droppable": false,
+                                    "badgable": true,
+                                    "stylable": true,
+                                    "stylable-require": "",
+                                    "unstylable": "",
+                                    "highlightable": 0,
+                                    "copyable": 0,
+                                    "resizable": false,
+                                    "editable": 0,
+                                    "layerable": true,
+                                    "selectable": true,
+                                    "hoverable": true,
+                                    "void": false,
+                                    "state": "",
+                                    "status": "",
+                                    "content": "Duis ac dignissim metus. Donec et lectus consequat, lobortis massa eget, sollicitudin mi. Nunc vestibulum justo ac orci aliquet, at mattis velit luctus. Praesent vel odio ipsum. Aliquam in elit convallis sapien commodo finibus ac sit amet nibh. Mauris aliquam maximus dui, quis pulvinar est aliquam eu. Proin nec luctus neque. Duis sit amet orci vitae arcu convallis accumsan. Pellentesque vestibulum eros a dolor ultrices ultrices. Morbi ornare in diam ut lacinia. Fusce feugiat pharetra sollicitudin. Sed aliquam lobortis dictum.",
+                                    "icon": "",
+                                    "style": {},
+                                    "attributes": {},
+                                    "classes": [
+                                        {
+                                            "name": "c2661",
+                                            "label": "c2661",
+                                            "type": 1,
+                                            "active": true,
+                                            "private": false,
+                                            "protected": false
+                                        }
+                                    ],
+                                    "script": "",
+                                    "traits": [
+                                        {
+                                            "type": "text",
+                                            "label": "",
+                                            "name": "id",
+                                            "min": "",
+                                            "max": "",
+                                            "unit": "",
+                                            "step": 1,
+                                            "value": "",
+                                            "default": "",
+                                            "placeholder": "eg. Text here",
+                                            "changeProp": 0,
+                                            "options": []
+                                        },
+                                        {
+                                            "type": "text",
+                                            "label": "",
+                                            "name": "title",
+                                            "min": "",
+                                            "max": "",
+                                            "unit": "",
+                                            "step": 1,
+                                            "value": "",
+                                            "default": "",
+                                            "placeholder": "eg. Text here",
+                                            "changeProp": 0,
+                                            "options": []
+                                        }
+                                    ],
+                                    "propagate": "",
+                                    "components": [],
+                                    "open": false
+                                }
+                            ],
+                            "open": false
+                        }
+                    ],
+                    "open": false
+                }
+            ],
+            "open": false
+        }
+    ],
+    "styles" : [
+        {
+            "selectors": [
+                {
+                    "name": "txt-red",
+                    "label": "txt-red",
+                    "type": 1,
+                    "active": true,
+                    "private": false,
+                    "protected": false
+                }
+            ],
+            "selectorsAdd": "",
+            "style": {
+                "color": "blue"
+            },
+            "mediaText": "",
+            "state": "",
+            "stylable": true,
+            "atRuleType": "",
+            "singleAtRule": 0,
+            "important": 0
+        },
+        {
+            "selectors": [
+                {
+                    "name": "c729",
+                    "label": "c729",
+                    "type": 1,
+                    "active": true,
+                    "private": false,
+                    "protected": false
+                }
+            ],
+            "selectorsAdd": "",
+            "style": {
+                "color": "black"
+            },
+            "mediaText": "",
+            "state": "",
+            "stylable": true,
+            "atRuleType": "",
+            "singleAtRule": 0,
+            "important": 0
+        },
+        {
+            "selectors": [
+                {
+                    "name": "gjs-row",
+                    "label": "gjs-row",
+                    "type": 1,
+                    "active": true,
+                    "private": 1,
+                    "protected": false
+                }
+            ],
+            "selectorsAdd": "",
+            "style": {
+                "display": "table",
+                "padding-top": "10px",
+                "padding-right": "10px",
+                "padding-bottom": "10px",
+                "padding-left": "10px",
+                "width": "100%"
+            },
+            "mediaText": "",
+            "state": "",
+            "stylable": true,
+            "atRuleType": "",
+            "singleAtRule": 0,
+            "important": 0
+        },
+        {
+            "selectors": [
+                {
+                    "name": "gjs-cell",
+                    "label": "gjs-cell",
+                    "type": 1,
+                    "active": true,
+                    "private": 1,
+                    "protected": false
+                }
+            ],
+            "selectorsAdd": "",
+            "style": {
+                "width": "100%",
+                "display": "block"
+            },
+            "mediaText": "(max-width: 768px)",
+            "state": "",
+            "stylable": true,
+            "atRuleType": "media",
+            "singleAtRule": 0,
+            "important": 0
+        },
+        {
+            "selectors": [
+                {
+                    "name": "gjs-cell30",
+                    "label": "gjs-cell30",
+                    "type": 1,
+                    "active": true,
+                    "private": false,
+                    "protected": false
+                }
+            ],
+            "selectorsAdd": "",
+            "style": {
+                "width": "100%",
+                "display": "block"
+            },
+            "mediaText": "(max-width: 768px)",
+            "state": "",
+            "stylable": true,
+            "atRuleType": "media",
+            "singleAtRule": 0,
+            "important": 0
+        },
+        {
+            "selectors": [
+                {
+                    "name": "gjs-cell70",
+                    "label": "gjs-cell70",
+                    "type": 1,
+                    "active": true,
+                    "private": false,
+                    "protected": false
+                }
+            ],
+            "selectorsAdd": "",
+            "style": {
+                "width": "100%",
+                "display": "block"
+            },
+            "mediaText": "(max-width: 768px)",
+            "state": "",
+            "stylable": true,
+            "atRuleType": "media",
+            "singleAtRule": 0,
+            "important": 0
+        },
+        {
+            "selectors": [
+                {
+                    "name": "gjs-cell",
+                    "label": "gjs-cell",
+                    "type": 1,
+                    "active": true,
+                    "private": 1,
+                    "protected": false
+                }
+            ],
+            "selectorsAdd": "",
+            "style": {
+                "width": "8%",
+                "display": "table-cell",
+                "height": "75px"
+            },
+            "mediaText": "",
+            "state": "",
+            "stylable": true,
+            "atRuleType": "",
+            "singleAtRule": 0,
+            "important": 0
+        },
+        {
+            "selectors": [
+                {
+                    "name": "gjs-cell",
+                    "label": "gjs-cell",
+                    "type": 1,
+                    "active": true,
+                    "private": 1,
+                    "protected": false
+                }
+            ],
+            "selectorsAdd": "",
+            "style": {
+                "width": "100%",
+                "display": "block"
+            },
+            "mediaText": "(max-width: 768px)",
+            "state": "",
+            "stylable": true,
+            "atRuleType": "media",
+            "singleAtRule": 0,
+            "important": 0
+        },
+        {
+            "selectors": [
+                {
+                    "name": "gjs-cell30",
+                    "label": "gjs-cell30",
+                    "type": 1,
+                    "active": true,
+                    "private": false,
+                    "protected": false
+                }
+            ],
+            "selectorsAdd": "",
+            "style": {
+                "width": "100%",
+                "display": "block"
+            },
+            "mediaText": "(max-width: 768px)",
+            "state": "",
+            "stylable": true,
+            "atRuleType": "media",
+            "singleAtRule": 0,
+            "important": 0
+        },
+        {
+            "selectors": [
+                {
+                    "name": "gjs-cell70",
+                    "label": "gjs-cell70",
+                    "type": 1,
+                    "active": true,
+                    "private": false,
+                    "protected": false
+                }
+            ],
+            "selectorsAdd": "",
+            "style": {
+                "width": "100%",
+                "display": "block"
+            },
+            "mediaText": "(max-width: 768px)",
+            "state": "",
+            "stylable": true,
+            "atRuleType": "media",
+            "singleAtRule": 0,
+            "important": 0
+        },
+        {
+            "selectors": [
+                {
+                    "name": "c842",
+                    "label": "c842",
+                    "type": 1,
+                    "active": true,
+                    "private": false,
+                    "protected": false
+                }
+            ],
+            "selectorsAdd": "",
+            "style": {
+                "color": "black"
+            },
+            "mediaText": "",
+            "state": "",
+            "stylable": true,
+            "atRuleType": "",
+            "singleAtRule": 0,
+            "important": 0
+        },
+        {
+            "selectors": [
+                {
+                    "name": "c858",
+                    "label": "c858",
+                    "type": 1,
+                    "active": true,
+                    "private": false,
+                    "protected": false
+                }
+            ],
+            "selectorsAdd": "",
+            "style": {
+                "color": "black"
+            },
+            "mediaText": "",
+            "state": "",
+            "stylable": true,
+            "atRuleType": "",
+            "singleAtRule": 0,
+            "important": 0
+        },
+        {
+            "selectors": [
+                {
+                    "name": "c873",
+                    "label": "c873",
+                    "type": 1,
+                    "active": true,
+                    "private": false,
+                    "protected": false
+                }
+            ],
+            "selectorsAdd": "",
+            "style": {
+                "color": "black",
+                "width": "577px",
+                "height": "515px"
+            },
+            "mediaText": "",
+            "state": "",
+            "stylable": true,
+            "atRuleType": "",
+            "singleAtRule": 0,
+            "important": 0
+        },
+        {
+            "selectors": [
+                {
+                    "name": "c944",
+                    "label": "c944",
+                    "type": 1,
+                    "active": true,
+                    "private": false,
+                    "protected": false
+                }
+            ],
+            "selectorsAdd": "",
+            "style": {
+                "padding": "10px"
+            },
+            "mediaText": "",
+            "state": "",
+            "stylable": true,
+            "atRuleType": "",
+            "singleAtRule": 0,
+            "important": 0
+        },
+        {
+            "selectors": [
+                {
+                    "name": "c963",
+                    "label": "c963",
+                    "type": 1,
+                    "active": true,
+                    "private": false,
+                    "protected": false
+                }
+            ],
+            "selectorsAdd": "",
+            "style": {
+                "padding": "10px"
+            },
+            "mediaText": "",
+            "state": "",
+            "stylable": true,
+            "atRuleType": "",
+            "singleAtRule": 0,
+            "important": 0
+        },
+        {
+            "selectors": [
+                {
+                    "name": "c1019",
+                    "label": "c1019",
+                    "type": 1,
+                    "active": true,
+                    "private": false,
+                    "protected": false
+                }
+            ],
+            "selectorsAdd": "",
+            "style": {
+                "padding": "10px"
+            },
+            "mediaText": "",
+            "state": "",
+            "stylable": true,
+            "atRuleType": "",
+            "singleAtRule": 0,
+            "important": 0
+        },
+        {
+            "selectors": [
+                {
+                    "name": "c1038",
+                    "label": "c1038",
+                    "type": 1,
+                    "active": true,
+                    "private": false,
+                    "protected": false
+                }
+            ],
+            "selectorsAdd": "",
+            "style": {
+                "padding": "10px"
+            },
+            "mediaText": "",
+            "state": "",
+            "stylable": true,
+            "atRuleType": "",
+            "singleAtRule": 0,
+            "important": 0
+        },
+        {
+            "selectors": [
+                {
+                    "name": "c1058",
+                    "label": "c1058",
+                    "type": 1,
+                    "active": true,
+                    "private": false,
+                    "protected": false
+                }
+            ],
+            "selectorsAdd": "",
+            "style": {
+                "margin": "0px 0px 15px",
+                "padding": "0px",
+                "text-align": "justify",
+                "font-family": "\"Open Sans\", Arial, sans-serif",
+                "font-size": "14px"
+            },
+            "mediaText": "",
+            "state": "",
+            "stylable": true,
+            "atRuleType": "",
+            "singleAtRule": 0,
+            "important": 0
+        },
+        {
+            "selectors": [
+                {
+                    "name": "c1067",
+                    "label": "c1067",
+                    "type": 1,
+                    "active": true,
+                    "private": false,
+                    "protected": false
+                }
+            ],
+            "selectorsAdd": "",
+            "style": {
+                "margin": "0px 0px 15px",
+                "padding": "0px",
+                "text-align": "justify",
+                "font-family": "\"Open Sans\", Arial, sans-serif",
+                "font-size": "14px"
+            },
+            "mediaText": "",
+            "state": "",
+            "stylable": true,
+            "atRuleType": "",
+            "singleAtRule": 0,
+            "important": 0
+        },
+        {
+            "selectors": [
+                {
+                    "name": "c1076",
+                    "label": "c1076",
+                    "type": 1,
+                    "active": true,
+                    "private": false,
+                    "protected": false
+                }
+            ],
+            "selectorsAdd": "",
+            "style": {
+                "margin": "0px 0px 15px",
+                "padding": "0px",
+                "text-align": "justify",
+                "font-family": "\"Open Sans\", Arial, sans-serif",
+                "font-size": "14px"
+            },
+            "mediaText": "",
+            "state": "",
+            "stylable": true,
+            "atRuleType": "",
+            "singleAtRule": 0,
+            "important": 0
+        },
+        {
+            "selectors": [
+                {
+                    "name": "c1085",
+                    "label": "c1085",
+                    "type": 1,
+                    "active": true,
+                    "private": false,
+                    "protected": false
+                }
+            ],
+            "selectorsAdd": "",
+            "style": {
+                "margin": "0px 0px 15px",
+                "padding": "0px",
+                "text-align": "justify",
+                "font-family": "\"Open Sans\", Arial, sans-serif",
+                "font-size": "14px"
+            },
+            "mediaText": "",
+            "state": "",
+            "stylable": true,
+            "atRuleType": "",
+            "singleAtRule": 0,
+            "important": 0
+        },
+        {
+            "selectors": [
+                {
+                    "name": "c1094",
+                    "label": "c1094",
+                    "type": 1,
+                    "active": true,
+                    "private": false,
+                    "protected": false
+                }
+            ],
+            "selectorsAdd": "",
+            "style": {
+                "font-family": "\"Open Sans\", Arial, sans-serif",
+                "font-size": "14px",
+                "text-align": "justify"
+            },
+            "mediaText": "",
+            "state": "",
+            "stylable": true,
+            "atRuleType": "",
+            "singleAtRule": 0,
+            "important": 0
+        },
+        {
+            "selectors": [
+                {
+                    "name": "gjs-cell",
+                    "label": "gjs-cell",
+                    "type": 1,
+                    "active": true,
+                    "private": 1,
+                    "protected": false
+                }
+            ],
+            "selectorsAdd": "",
+            "style": {
+                "width": "100%",
+                "display": "block"
+            },
+            "mediaText": "(max-width: 768px)",
+            "state": "",
+            "stylable": true,
+            "atRuleType": "media",
+            "singleAtRule": 0,
+            "important": 0
+        },
+        {
+            "selectors": [
+                {
+                    "name": "gjs-cell30",
+                    "label": "gjs-cell30",
+                    "type": 1,
+                    "active": true,
+                    "private": false,
+                    "protected": false
+                }
+            ],
+            "selectorsAdd": "",
+            "style": {
+                "width": "100%",
+                "display": "block"
+            },
+            "mediaText": "(max-width: 768px)",
+            "state": "",
+            "stylable": true,
+            "atRuleType": "media",
+            "singleAtRule": 0,
+            "important": 0
+        },
+        {
+            "selectors": [
+                {
+                    "name": "gjs-cell70",
+                    "label": "gjs-cell70",
+                    "type": 1,
+                    "active": true,
+                    "private": false,
+                    "protected": false
+                }
+            ],
+            "selectorsAdd": "",
+            "style": {
+                "width": "100%",
+                "display": "block"
+            },
+            "mediaText": "(max-width: 768px)",
+            "state": "",
+            "stylable": true,
+            "atRuleType": "media",
+            "singleAtRule": 0,
+            "important": 0
+        },
+        {
+            "selectors": [
+                {
+                    "name": "gjs-cell",
+                    "label": "gjs-cell",
+                    "type": 1,
+                    "active": true,
+                    "private": 1,
+                    "protected": false
+                }
+            ],
+            "selectorsAdd": "",
+            "style": {
+                "width": "100%",
+                "display": "block"
+            },
+            "mediaText": "(max-width: 768px)",
+            "state": "",
+            "stylable": true,
+            "atRuleType": "media",
+            "singleAtRule": 0,
+            "important": 0
+        },
+        {
+            "selectors": [
+                {
+                    "name": "gjs-cell30",
+                    "label": "gjs-cell30",
+                    "type": 1,
+                    "active": true,
+                    "private": false,
+                    "protected": false
+                }
+            ],
+            "selectorsAdd": "",
+            "style": {
+                "width": "100%",
+                "display": "block"
+            },
+            "mediaText": "(max-width: 768px)",
+            "state": "",
+            "stylable": true,
+            "atRuleType": "media",
+            "singleAtRule": 0,
+            "important": 0
+        },
+        {
+            "selectors": [
+                {
+                    "name": "gjs-cell70",
+                    "label": "gjs-cell70",
+                    "type": 1,
+                    "active": true,
+                    "private": false,
+                    "protected": false
+                }
+            ],
+            "selectorsAdd": "",
+            "style": {
+                "width": "100%",
+                "display": "block"
+            },
+            "mediaText": "(max-width: 768px)",
+            "state": "",
+            "stylable": true,
+            "atRuleType": "media",
+            "singleAtRule": 0,
+            "important": 0
+        },
+        {
+            "selectors": [
+                {
+                    "name": "gjs-cell",
+                    "label": "gjs-cell",
+                    "type": 1,
+                    "active": true,
+                    "private": 1,
+                    "protected": false
+                }
+            ],
+            "selectorsAdd": "",
+            "style": {
+                "width": "100%",
+                "display": "block"
+            },
+            "mediaText": "(max-width: 768px)",
+            "state": "",
+            "stylable": true,
+            "atRuleType": "media",
+            "singleAtRule": 0,
+            "important": 0
+        },
+        {
+            "selectors": [
+                {
+                    "name": "gjs-cell30",
+                    "label": "gjs-cell30",
+                    "type": 1,
+                    "active": true,
+                    "private": false,
+                    "protected": false
+                }
+            ],
+            "selectorsAdd": "",
+            "style": {
+                "width": "100%",
+                "display": "block"
+            },
+            "mediaText": "(max-width: 768px)",
+            "state": "",
+            "stylable": true,
+            "atRuleType": "media",
+            "singleAtRule": 0,
+            "important": 0
+        },
+        {
+            "selectors": [
+                {
+                    "name": "gjs-cell70",
+                    "label": "gjs-cell70",
+                    "type": 1,
+                    "active": true,
+                    "private": false,
+                    "protected": false
+                }
+            ],
+            "selectorsAdd": "",
+            "style": {
+                "width": "100%",
+                "display": "block"
+            },
+            "mediaText": "(max-width: 768px)",
+            "state": "",
+            "stylable": true,
+            "atRuleType": "media",
+            "singleAtRule": 0,
+            "important": 0
+        },
+        {
+            "selectors": [
+                {
+                    "name": "gjs-cell",
+                    "label": "gjs-cell",
+                    "type": 1,
+                    "active": true,
+                    "private": 1,
+                    "protected": false
+                }
+            ],
+            "selectorsAdd": "",
+            "style": {
+                "width": "100%",
+                "display": "block"
+            },
+            "mediaText": "(max-width: 768px)",
+            "state": "",
+            "stylable": true,
+            "atRuleType": "media",
+            "singleAtRule": 0,
+            "important": 0
+        },
+        {
+            "selectors": [
+                {
+                    "name": "gjs-cell30",
+                    "label": "gjs-cell30",
+                    "type": 1,
+                    "active": true,
+                    "private": false,
+                    "protected": false
+                }
+            ],
+            "selectorsAdd": "",
+            "style": {
+                "width": "100%",
+                "display": "block"
+            },
+            "mediaText": "(max-width: 768px)",
+            "state": "",
+            "stylable": true,
+            "atRuleType": "media",
+            "singleAtRule": 0,
+            "important": 0
+        },
+        {
+            "selectors": [
+                {
+                    "name": "gjs-cell70",
+                    "label": "gjs-cell70",
+                    "type": 1,
+                    "active": true,
+                    "private": false,
+                    "protected": false
+                }
+            ],
+            "selectorsAdd": "",
+            "style": {
+                "width": "100%",
+                "display": "block"
+            },
+            "mediaText": "(max-width: 768px)",
+            "state": "",
+            "stylable": true,
+            "atRuleType": "media",
+            "singleAtRule": 0,
+            "important": 0
+        },
+        {
+            "selectors": [
+                {
+                    "name": "gjs-cell",
+                    "label": "gjs-cell",
+                    "type": 1,
+                    "active": true,
+                    "private": 1,
+                    "protected": false
+                }
+            ],
+            "selectorsAdd": "",
+            "style": {
+                "width": "100%",
+                "display": "block"
+            },
+            "mediaText": "(max-width: 768px)",
+            "state": "",
+            "stylable": true,
+            "atRuleType": "media",
+            "singleAtRule": 0,
+            "important": 0
+        },
+        {
+            "selectors": [
+                {
+                    "name": "gjs-cell30",
+                    "label": "gjs-cell30",
+                    "type": 1,
+                    "active": true,
+                    "private": false,
+                    "protected": false
+                }
+            ],
+            "selectorsAdd": "",
+            "style": {
+                "width": "100%",
+                "display": "block"
+            },
+            "mediaText": "(max-width: 768px)",
+            "state": "",
+            "stylable": true,
+            "atRuleType": "media",
+            "singleAtRule": 0,
+            "important": 0
+        },
+        {
+            "selectors": [
+                {
+                    "name": "gjs-cell70",
+                    "label": "gjs-cell70",
+                    "type": 1,
+                    "active": true,
+                    "private": false,
+                    "protected": false
+                }
+            ],
+            "selectorsAdd": "",
+            "style": {
+                "width": "100%",
+                "display": "block"
+            },
+            "mediaText": "(max-width: 768px)",
+            "state": "",
+            "stylable": true,
+            "atRuleType": "media",
+            "singleAtRule": 0,
+            "important": 0
+        },
+        {
+            "selectors": [
+                {
+                    "name": "c2186",
+                    "label": "c2186",
+                    "type": 1,
+                    "active": true,
+                    "private": false,
+                    "protected": false
+                }
+            ],
+            "selectorsAdd": "",
+            "style": {
+                "color": "black"
+            },
+            "mediaText": "",
+            "state": "",
+            "stylable": true,
+            "atRuleType": "",
+            "singleAtRule": 0,
+            "important": 0
+        },
+        {
+            "selectors": [
+                {
+                    "name": "c2202",
+                    "label": "c2202",
+                    "type": 1,
+                    "active": true,
+                    "private": false,
+                    "protected": false
+                }
+            ],
+            "selectorsAdd": "",
+            "style": {
+                "color": "black"
+            },
+            "mediaText": "",
+            "state": "",
+            "stylable": true,
+            "atRuleType": "",
+            "singleAtRule": 0,
+            "important": 0
+        },
+        {
+            "selectors": [
+                {
+                    "name": "c2217",
+                    "label": "c2217",
+                    "type": 1,
+                    "active": true,
+                    "private": false,
+                    "protected": false
+                }
+            ],
+            "selectorsAdd": "",
+            "style": {
+                "color": "black",
+                "width": "560px",
+                "height": "499px"
+            },
+            "mediaText": "",
+            "state": "",
+            "stylable": true,
+            "atRuleType": "",
+            "singleAtRule": 0,
+            "important": 0
+        },
+        {
+            "selectors": [
+                {
+                    "name": "row",
+                    "label": "row",
+                    "type": 1,
+                    "active": true,
+                    "private": 1,
+                    "protected": false
+                }
+            ],
+            "selectorsAdd": "",
+            "style": {
+                "display": "flex",
+                "justify-content": "flex-start",
+                "align-items": "stretch",
+                "flex-wrap": "nowrap",
+                "padding-top": "10px",
+                "padding-right": "10px",
+                "padding-bottom": "10px",
+                "padding-left": "10px"
+            },
+            "mediaText": "",
+            "state": "",
+            "stylable": true,
+            "atRuleType": "",
+            "singleAtRule": 0,
+            "important": 0
+        },
+        {
+            "selectors": [
+                {
+                    "name": "row",
+                    "label": "row",
+                    "type": 1,
+                    "active": true,
+                    "private": 1,
+                    "protected": false
+                }
+            ],
+            "selectorsAdd": "",
+            "style": {
+                "flex-wrap": "wrap"
+            },
+            "mediaText": "(max-width: 768px)",
+            "state": "",
+            "stylable": true,
+            "atRuleType": "media",
+            "singleAtRule": 0,
+            "important": 0
+        },
+        {
+            "selectors": [
+                {
+                    "name": "cell",
+                    "label": "cell",
+                    "type": 1,
+                    "active": true,
+                    "private": 1,
+                    "protected": false
+                }
+            ],
+            "selectorsAdd": "",
+            "style": {
+                "min-height": "75px",
+                "flex-grow": "1",
+                "flex-basis": "100%"
+            },
+            "mediaText": "",
+            "state": "",
+            "stylable": true,
+            "atRuleType": "",
+            "singleAtRule": 0,
+            "important": 0
+        },
+        {
+            "selectors": [
+                {
+                    "name": "row",
+                    "label": "row",
+                    "type": 1,
+                    "active": true,
+                    "private": 1,
+                    "protected": false
+                }
+            ],
+            "selectorsAdd": "",
+            "style": {
+                "flex-wrap": "wrap"
+            },
+            "mediaText": "(max-width: 768px)",
+            "state": "",
+            "stylable": true,
+            "atRuleType": "media",
+            "singleAtRule": 0,
+            "important": 0
+        },
+        {
+            "selectors": [
+                {
+                    "name": "c2499",
+                    "label": "c2499",
+                    "type": 1,
+                    "active": true,
+                    "private": false,
+                    "protected": false
+                }
+            ],
+            "selectorsAdd": "",
+            "style": {
+                "color": "black"
+            },
+            "mediaText": "",
+            "state": "",
+            "stylable": true,
+            "atRuleType": "",
+            "singleAtRule": 0,
+            "important": 0
+        },
+        {
+            "selectors": [
+                {
+                    "name": "c2515",
+                    "label": "c2515",
+                    "type": 1,
+                    "active": true,
+                    "private": false,
+                    "protected": false
+                }
+            ],
+            "selectorsAdd": "",
+            "style": {
+                "color": "black"
+            },
+            "mediaText": "",
+            "state": "",
+            "stylable": true,
+            "atRuleType": "",
+            "singleAtRule": 0,
+            "important": 0
+        },
+        {
+            "selectors": [
+                {
+                    "name": "c2530",
+                    "label": "c2530",
+                    "type": 1,
+                    "active": true,
+                    "private": false,
+                    "protected": false
+                }
+            ],
+            "selectorsAdd": "",
+            "style": {
+                "color": "black",
+                "width": "533px",
+                "height": "475px"
+            },
+            "mediaText": "",
+            "state": "",
+            "stylable": true,
+            "atRuleType": "",
+            "singleAtRule": 0,
+            "important": 0
+        },
+        {
+            "selectors": [
+                {
+                    "name": "c2587",
+                    "label": "c2587",
+                    "type": 1,
+                    "active": true,
+                    "private": false,
+                    "protected": false
+                }
+            ],
+            "selectorsAdd": "",
+            "style": {
+                "padding": "10px"
+            },
+            "mediaText": "",
+            "state": "",
+            "stylable": true,
+            "atRuleType": "",
+            "singleAtRule": 0,
+            "important": 0
+        },
+        {
+            "selectors": [
+                {
+                    "name": "c2606",
+                    "label": "c2606",
+                    "type": 1,
+                    "active": true,
+                    "private": false,
+                    "protected": false
+                }
+            ],
+            "selectorsAdd": "",
+            "style": {
+                "padding": "10px"
+            },
+            "mediaText": "",
+            "state": "",
+            "stylable": true,
+            "atRuleType": "",
+            "singleAtRule": 0,
+            "important": 0
+        },
+        {
+            "selectors": [
+                {
+                    "name": "c2625",
+                    "label": "c2625",
+                    "type": 1,
+                    "active": true,
+                    "private": false,
+                    "protected": false
+                }
+            ],
+            "selectorsAdd": "",
+            "style": {
+                "margin": "0px 0px 15px",
+                "padding": "0px",
+                "text-align": "justify",
+                "font-family": "\"Open Sans\", Arial, sans-serif",
+                "font-size": "14px"
+            },
+            "mediaText": "",
+            "state": "",
+            "stylable": true,
+            "atRuleType": "",
+            "singleAtRule": 0,
+            "important": 0
+        },
+        {
+            "selectors": [
+                {
+                    "name": "c2634",
+                    "label": "c2634",
+                    "type": 1,
+                    "active": true,
+                    "private": false,
+                    "protected": false
+                }
+            ],
+            "selectorsAdd": "",
+            "style": {
+                "margin": "0px 0px 15px",
+                "padding": "0px",
+                "text-align": "justify",
+                "font-family": "\"Open Sans\", Arial, sans-serif",
+                "font-size": "14px"
+            },
+            "mediaText": "",
+            "state": "",
+            "stylable": true,
+            "atRuleType": "",
+            "singleAtRule": 0,
+            "important": 0
+        },
+        {
+            "selectors": [
+                {
+                    "name": "c2643",
+                    "label": "c2643",
+                    "type": 1,
+                    "active": true,
+                    "private": false,
+                    "protected": false
+                }
+            ],
+            "selectorsAdd": "",
+            "style": {
+                "margin": "0px 0px 15px",
+                "padding": "0px",
+                "text-align": "justify",
+                "font-family": "\"Open Sans\", Arial, sans-serif",
+                "font-size": "14px"
+            },
+            "mediaText": "",
+            "state": "",
+            "stylable": true,
+            "atRuleType": "",
+            "singleAtRule": 0,
+            "important": 0
+        },
+        {
+            "selectors": [
+                {
+                    "name": "c2652",
+                    "label": "c2652",
+                    "type": 1,
+                    "active": true,
+                    "private": false,
+                    "protected": false
+                }
+            ],
+            "selectorsAdd": "",
+            "style": {
+                "margin": "0px 0px 15px",
+                "padding": "0px",
+                "text-align": "justify",
+                "font-family": "\"Open Sans\", Arial, sans-serif",
+                "font-size": "14px"
+            },
+            "mediaText": "",
+            "state": "",
+            "stylable": true,
+            "atRuleType": "",
+            "singleAtRule": 0,
+            "important": 0
+        },
+        {
+            "selectors": [
+                {
+                    "name": "c2661",
+                    "label": "c2661",
+                    "type": 1,
+                    "active": true,
+                    "private": false,
+                    "protected": false
+                }
+            ],
+            "selectorsAdd": "",
+            "style": {
+                "margin": "0px 0px 15px",
+                "padding": "0px",
+                "text-align": "justify",
+                "font-family": "\"Open Sans\", Arial, sans-serif",
+                "font-size": "14px"
+            },
+            "mediaText": "",
+            "state": "",
+            "stylable": true,
+            "atRuleType": "",
+            "singleAtRule": 0,
+            "important": 0
+        },
+        {
+            "selectors": [
+                {
+                    "name": "gjs-cell",
+                    "label": "gjs-cell",
+                    "type": 1,
+                    "active": true,
+                    "private": 1,
+                    "protected": false
+                }
+            ],
+            "selectorsAdd": "",
+            "style": {
+                "width": "100%",
+                "display": "block"
+            },
+            "mediaText": "(max-width: 768px)",
+            "state": "",
+            "stylable": true,
+            "atRuleType": "media",
+            "singleAtRule": 0,
+            "important": 0
+        },
+        {
+            "selectors": [
+                {
+                    "name": "gjs-cell30",
+                    "label": "gjs-cell30",
+                    "type": 1,
+                    "active": true,
+                    "private": false,
+                    "protected": false
+                }
+            ],
+            "selectorsAdd": "",
+            "style": {
+                "width": "100%",
+                "display": "block"
+            },
+            "mediaText": "(max-width: 768px)",
+            "state": "",
+            "stylable": true,
+            "atRuleType": "media",
+            "singleAtRule": 0,
+            "important": 0
+        },
+        {
+            "selectors": [
+                {
+                    "name": "gjs-cell70",
+                    "label": "gjs-cell70",
+                    "type": 1,
+                    "active": true,
+                    "private": false,
+                    "protected": false
+                }
+            ],
+            "selectorsAdd": "",
+            "style": {
+                "width": "100%",
+                "display": "block"
+            },
+            "mediaText": "(max-width: 768px)",
+            "state": "",
+            "stylable": true,
+            "atRuleType": "media",
+            "singleAtRule": 0,
+            "important": 0
+        },
+        {
+            "selectors": [
+                {
+                    "name": "gjs-cell",
+                    "label": "gjs-cell",
+                    "type": 1,
+                    "active": true,
+                    "private": 1,
+                    "protected": false
+                }
+            ],
+            "selectorsAdd": "",
+            "style": {
+                "width": "100%",
+                "display": "block"
+            },
+            "mediaText": "(max-width: 768px)",
+            "state": "",
+            "stylable": true,
+            "atRuleType": "media",
+            "singleAtRule": 0,
+            "important": 0
+        },
+        {
+            "selectors": [
+                {
+                    "name": "gjs-cell30",
+                    "label": "gjs-cell30",
+                    "type": 1,
+                    "active": true,
+                    "private": false,
+                    "protected": false
+                }
+            ],
+            "selectorsAdd": "",
+            "style": {
+                "width": "100%",
+                "display": "block"
+            },
+            "mediaText": "(max-width: 768px)",
+            "state": "",
+            "stylable": true,
+            "atRuleType": "media",
+            "singleAtRule": 0,
+            "important": 0
+        },
+        {
+            "selectors": [
+                {
+                    "name": "gjs-cell70",
+                    "label": "gjs-cell70",
+                    "type": 1,
+                    "active": true,
+                    "private": false,
+                    "protected": false
+                }
+            ],
+            "selectorsAdd": "",
+            "style": {
+                "width": "100%",
+                "display": "block"
+            },
+            "mediaText": "(max-width: 768px)",
+            "state": "",
+            "stylable": true,
+            "atRuleType": "media",
+            "singleAtRule": 0,
+            "important": 0
+        },
+        {
+            "selectors": [
+                {
+                    "name": "c2803",
+                    "label": "c2803",
+                    "type": 1,
+                    "active": true,
+                    "private": false,
+                    "protected": false
+                }
+            ],
+            "selectorsAdd": "",
+            "style": {
+                "padding": "10px"
+            },
+            "mediaText": "",
+            "state": "",
+            "stylable": true,
+            "atRuleType": "",
+            "singleAtRule": 0,
+            "important": 0
+        },
+        {
+            "selectors": [
+                {
+                    "name": "c2822",
+                    "label": "c2822",
+                    "type": 1,
+                    "active": true,
+                    "private": false,
+                    "protected": false
+                }
+            ],
+            "selectorsAdd": "",
+            "style": {
+                "padding": "10px",
+                "position": "static",
+                "float": "none",
+                "font-size": "50px",
+                "font-family": "Georgia, serif",
+                "font-weight": "700",
+                "color": "#000000",
+                "text-align": "center"
+            },
+            "mediaText": "",
+            "state": "",
+            "stylable": true,
+            "atRuleType": "",
+            "singleAtRule": 0,
+            "important": 0
+        }
+    ]
+}
