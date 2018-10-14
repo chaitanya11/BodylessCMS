@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Resolve, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 import { Observable } from 'rxjs';
-import { ConfigService } from "../services/aws/config/config.service";
+import { ConfigService } from '../services/aws/config/config.service';
 
 @Injectable({
     providedIn: 'root'

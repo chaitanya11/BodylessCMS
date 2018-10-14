@@ -4,7 +4,7 @@ import {
   CognitoUserSession
 } from 'amazon-cognito-identity-js';
 import * as AWS from 'aws-sdk';
-import { Config } from "../config";
+import { Config } from '../config';
 
 @Injectable({
   providedIn: 'root'

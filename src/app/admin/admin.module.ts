@@ -26,8 +26,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     SignupComponent,
     LogoutComponent
   ],
-  providers: [
-    
-  ]
+  providers: []
 })
-export class AdminModule { }
+export class AdminModule {
+}

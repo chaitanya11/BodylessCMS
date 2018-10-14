@@ -17,7 +17,7 @@ export class ConfigService {
         accessKeyId: accessKeyId,
         secretAccessKey: secretAccessKey,
         sessionToken: sessionToken
-      })
+      });
       this.accessKeyId = accessKeyId;
       this.secretAccessKey = secretAccessKey;
       this.sessionToken = sessionToken;
@@ -25,7 +25,7 @@ export class ConfigService {
 
   checkConfig() {
     return [this.accessKeyId, this.secretAccessKey, this.sessionToken].every(
-      (key) => key != undefined
+      (key) => key !== undefined
     );
   }
 }
