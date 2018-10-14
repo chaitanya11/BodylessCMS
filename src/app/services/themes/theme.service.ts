@@ -18,7 +18,7 @@ export class ThemeService {
      * List all the themes got in the response.
      */
     return this.http.get<Array<ThemeMap>>(ThemeConstants.THEME_MAPPING_FILE_NAME);
-  };
+  }
 
   loadTheme(themeName: string): Observable<Theme> {
     // load template.

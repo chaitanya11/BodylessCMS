@@ -19,7 +19,6 @@ import { HttpClientModule } from '@angular/common/http';
   providers: [],
   bootstrap: [AppComponent]
 })
-// TODO implement save template functionality.
-// TODO implement loading template functionality.
+
 // TODO create various templates.
 export class AppModule { }

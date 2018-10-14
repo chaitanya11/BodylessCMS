@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Validators, FormBuilder } from '@angular/forms';
-import ThemeMap from "../beans/thememap.bean";
-import Theme from "../beans/theme.bean";
-import ThemeConstants from "../constants/theme.constants";
-import { S3Service } from "../../services/aws/s3/s3.service";
-import { Config } from "../../services/aws/config/index";
+import ThemeMap from '../beans/thememap.bean';
+import Theme from '../beans/theme.bean';
+import ThemeConstants from '../constants/theme.constants';
+import { S3Service } from '../../services/aws/s3/s3.service';
+import { Config } from '../../services/aws/config/index';
 import { Router } from '@angular/router';
-import { ThemeService } from "../../services/themes/theme.service";
+import { ThemeService } from '../../services/themes/theme.service';
+import { AppConstants } from '../constants/app.constants';
 
 declare var $: any;
 
@@ -38,7 +39,7 @@ export class DashboardComponent implements OnInit {
 
   async createNewTheme() {
     /**
-     * TODO create new theme.
+     * create new theme.
      * Steps:
      * Ask for themplate name.
      * Create a json with template name in s3 with empty grapesjs template.
@@ -46,25 +47,25 @@ export class DashboardComponent implements OnInit {
      * Redirect to webpagebuilder with given template name.
      */
     console.log('create new theme.');
-    let themeName = this.createThemeForm.value.themeName;
-    let themeFileName = ThemeConstants.THEME_FILE_PREFIX + themeName + '.json';
-    let newThemeMapping = new ThemeMap(themeName,
+    const themeName = this.createThemeForm.value.themeName;
+    const themeFileName = ThemeConstants.THEME_FILE_PREFIX + themeName + '.json';
+    const newThemeMapping = new ThemeMap(themeName,
       this.emptyImg,
       this.createThemeForm.value.themeDescription);
-    let newTheme = new Theme(ThemeConstants.NEW_GRAPESJS_COMPONENTS,
+    const newTheme = new Theme(ThemeConstants.NEW_GRAPESJS_COMPONENTS,
       ThemeConstants.NEW_GRAPESJS_STYLES);
     this.themeMappings.push(newThemeMapping);
     await this._s3Service.putObject(
       JSON.stringify(newTheme),
       themeFileName,
       this.ngBucketName,
-      "application/json"
+      AppConstants.JSON_CONTENT_TYPE
     );
     await this._s3Service.putObject(
       JSON.stringify(this.themeMappings),
       ThemeConstants.THEME_MAPPING_FILE_NAME,
       this.ngBucketName,
-      "application/json"
+      AppConstants.JSON_CONTENT_TYPE
     );
     $('#createThemeModalClose').click();
     // redirecting to new theme page.
@@ -85,5 +86,5 @@ export class DashboardComponent implements OnInit {
         console.error(err);
       }
     );
-  };
+  }
 }

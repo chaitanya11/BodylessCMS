@@ -1,8 +1,9 @@
-import ThemeConstants from "../constants/theme.constants";
+import ThemeConstants from '../constants/theme.constants';
+
 export default class GrapesjsInit {
     public static initializationTemplate = (bucketname,
         accessKeyId,
-        secretAccessKey, 
+        secretAccessKey,
         sessionToken,
         eventEmitter,
         components,
@@ -20,9 +21,9 @@ export default class GrapesjsInit {
             ],
             pluginsOpts: {
                 'gjs-plugin-s3': {
-                    imgFormats: ["png", "jpeg", "jpg"],
+                    imgFormats: ['png', 'jpeg', 'jpg'],
                     bucketName: bucketname, // should be ng code bucket.
-                    prefix: "content/img/", // FIXME should be assets/img/
+                    prefix: 'content/img/', // FIXME should be assets/img/
                     accessKeyId: accessKeyId,
                     secretAccessKey: secretAccessKey,
                     sessionToken: sessionToken
@@ -60,19 +61,19 @@ export default class GrapesjsInit {
                 autoload: false
             }
         };
-    };
+    }
 
     public static initaliseEmptyTemplate = (bucketname,
         accessKeyId,
-        secretAccessKey, 
+        secretAccessKey,
         sessionToken,
         eventEmitter) => {
-        let components = ThemeConstants.NEW_GRAPESJS_COMPONENTS;
-        let styles = ThemeConstants.NEW_GRAPESJS_STYLES;
-        let result = GrapesjsInit.initializationTemplate(
+        const components = ThemeConstants.NEW_GRAPESJS_COMPONENTS;
+        const styles = ThemeConstants.NEW_GRAPESJS_STYLES;
+        const result = GrapesjsInit.initializationTemplate(
             bucketname,
             accessKeyId,
-            secretAccessKey, 
+            secretAccessKey,
             sessionToken,
             eventEmitter,
             components,

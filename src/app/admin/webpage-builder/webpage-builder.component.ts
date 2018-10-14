@@ -1,18 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import { ConfigService } from "../../services/aws/config/config.service";
-import { Router, ActivatedRoute } from "@angular/router";
-import { EventEmitter } from "events";
-import { Config } from "../../services/aws/config/index";
-import Theme from "../beans/theme.bean";
-import GrapesjsInit from "../grapesjs-config/initialization.config";
-import { ThemeService } from "../../services/themes/theme.service";
-import { S3Service } from "../../services/aws/s3/s3.service";
-// import * as html2canvas from "html2canvas";
+import { ConfigService } from '../../services/aws/config/config.service';
+import { Router, ActivatedRoute } from '@angular/router';
+import { EventEmitter } from 'events';
+import { Config } from '../../services/aws/config/index';
+import Theme from '../beans/theme.bean';
+import GrapesjsInit from '../grapesjs-config/initialization.config';
+import { ThemeService } from '../../services/themes/theme.service';
+import { S3Service } from '../../services/aws/s3/s3.service';
+import * as html2canvas from 'html2canvas';
 import ThemeConstants from '../constants/theme.constants';
-// import ThemeMap from '../beans/thememap.bean';
+import { AppConstants } from '../constants/app.constants';
+import ThemeMap from '../beans/thememap.bean';
 
 
 declare var grapesjs: any; // Important!
+declare var $: any;
 
 /**
  * This is a the base component for building the WebPages using the GrapeJs.
@@ -78,7 +80,7 @@ export class WebPageBuilderComponent implements OnInit {
 
     async start() {
         this.selectedTheme = await this.loadTheme();
-        let grapesjsInitObject = GrapesjsInit.initializationTemplate(
+        const grapesjsInitObject = GrapesjsInit.initializationTemplate(
             Config.bucketname,
             this._configService.accessKeyId,
             this._configService.secretAccessKey,
@@ -95,49 +97,61 @@ export class WebPageBuilderComponent implements OnInit {
         const components = this.editor.getComponents();
         const styles = this.editor.getStyle();
         /**
-         * TODO save template.
+         * save template.
          * Steps
          * Take screenshot of them designed theme.
          * Upload the screenshot and new theme json to s3.
          */
-        let ngBucketName = 'ng-' + Config.bucketname;
+        const ngBucketName = 'ng-' + Config.bucketname;
         this.selectedTheme.components = components;
         this.selectedTheme.styles = styles;
         // uploading theme to s3.
-        await this._s3Service.putObject(JSON.stringify(this.selectedTheme),
-            ThemeConstants.THEME_FILE_PREFIX + this.template + '.json',
-            ngBucketName,
-            "application/json");
+        // await this._s3Service.putObject(JSON.stringify(this.selectedTheme),
+        //     ThemeConstants.THEME_FILE_PREFIX + this.template + '.json',
+        //     ngBucketName,
+        //     AppConstants.JSON_CONTENT_TYPE);
 
-        // // take screenshot.
-        // html2canvas(document.body).then(async canvas => {
-        //     var imgData = canvas.toDataURL("image/png");
-        //     await this._s3Service.putObject(imgData,
-        //         ThemeConstants.IMG_PREFIX + this.template + '.png',
-        //         ngBucketName,
-        //         "image/png");
-        // });
+        // take screenshot.
 
-        // // update themeMappings file for new screenshot.
-        // let themeMappings: Array<ThemeMap> = [];
-        // this._themeService.listAvailableTemplates().subscribe(
-        //     async (res: Array<ThemeMap>) => {
-        //         themeMappings = res;
-        //         themeMappings.map(tm => {
-        //             if (tm.name === this.template) {
-        //                 tm.image = '../../../assets/img' + this.template + '.png';
-        //             }
-        //         });
-        //         await this._s3Service.putObject(JSON.stringify(themeMappings),
-        //         ThemeConstants.THEME_MAPPING_FILE_NAME,
-        //         ngBucketName,
-        //         "application/json");
-        //     },
-        //     err => {
-        //         // TODO something went wrong.
-        //         console.error(err);
-        //     }
-        // );
+        html2canvas(document.getElementsByClassName('gjs-cv-canvas')[0], {
+            useCORS: true
+        }).then(async canvas => {
+            let imgData = canvas.toDataURL(AppConstants.PNG_CONTENT_TYPE);
+            imgData = this.dataURItoBlob(imgData);
+            await this._s3Service.putObject(imgData,
+                ThemeConstants.IMG_PREFIX + this.template + '.png',
+                ngBucketName,
+                AppConstants.PNG_CONTENT_TYPE);
+        });
+
+        // update themeMappings file for new screenshot.
+        let themeMappings: Array<ThemeMap> = [];
+        this._themeService.listAvailableTemplates().subscribe(
+            async (res: Array<ThemeMap>) => {
+                themeMappings = res;
+                themeMappings.map(tm => {
+                    if (tm.name === this.template) {
+                        tm.image = '../../../assets/img/' + this.template + '.png';
+                    }
+                });
+                await this._s3Service.putObject(JSON.stringify(themeMappings),
+                    ThemeConstants.THEME_MAPPING_FILE_NAME,
+                    ngBucketName,
+                    AppConstants.JSON_CONTENT_TYPE);
+            },
+            err => {
+                // TODO something went wrong.
+                console.error(err);
+            }
+        );
     }
 
+    dataURItoBlob(dataURI) {
+        const binary = atob(dataURI.split(',')[1]);
+        const array = [];
+        for (let i = 0; i < binary.length; i++) {
+            array.push(binary.charCodeAt(i));
+        }
+        return new Blob([new Uint8Array(array)], { type: AppConstants.PNG_CONTENT_TYPE });
+    }
 }
