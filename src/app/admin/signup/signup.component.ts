@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from "@angular/router";
-import { CognitoService } from "../../services/aws/cognito/cognito.service";
+import { Router } from '@angular/router';
+import { CognitoService } from '../../services/aws/cognito/cognito.service';
 
 @Component({
   selector: 'app-signup',
@@ -24,7 +24,7 @@ export class SignupComponent implements OnInit {
   signup() {
     console.log(this.email, this.userName, this.password);
     this._cognitoService.signup(this.userName, this.password, this.email);
-    console.log("Signup is completed, redirecting to login page ...");
+    console.log('Signup is completed, redirecting to login page ...');
     this.router.navigateByUrl('admin/login');
   }
 }

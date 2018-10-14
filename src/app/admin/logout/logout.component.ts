@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from "@angular/router";
-import { ConfigService } from "../../services/aws/config/config.service";
-import { CognitoService } from "../../services/aws/cognito/cognito.service";
+import { Router } from '@angular/router';
+import { ConfigService } from '../../services/aws/config/config.service';
+import { CognitoService } from '../../services/aws/cognito/cognito.service';
 
 @Component({
   selector: 'app-logout',

@@ -12,13 +12,16 @@ export class S3Service {
     this.s3 = new AWS.S3();
   }
 
-  putObject(body: Buffer | Uint8Array | Blob | string, key: string, bucketName: string, contentType: string): Promise<any> {
+  putObject(body: Buffer | Uint8Array | Blob | string,
+    key: string, bucketName: string, contentType: string,
+    contentEncoding: string = ''): Promise<any> {
     return new Promise<any>((resolve, reject) => {
       const params = {
         Body: body,
         Bucket: bucketName,
         Key: key,
-        ContentType: contentType
+        ContentType: contentType,
+        ContentEncoding: contentEncoding
       };
       console.log(params);
 
