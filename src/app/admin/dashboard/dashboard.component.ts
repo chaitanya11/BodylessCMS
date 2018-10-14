@@ -18,7 +18,7 @@ declare var $: any;
 export class DashboardComponent implements OnInit {
   themeMappings: Array<ThemeMap> = [];
   createThemeForm: any;
-  emptyImg = '../../../assets/empty.png';
+  emptyImg = '../../../assets/img/empty.png';
   ngBucketName = 'ng-' + Config.bucketname;
 
   constructor(
