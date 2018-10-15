@@ -2,19 +2,21 @@
   <div class="row">
     <div class="col-md-6">
       <div class="custom-template-button">
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createNewTheme">
-          Create Own Template
-        </button>
+        <div class="thumbnail template-card" data-toggle="modal" data-target="#createNewTheme">
+          <img src="../../../assets/img/plus-icon.svg">
+          <div class="caption">
+            <h4>Create new Theme</h4>
+          </div>
+        </div>
       </div>
     </div>
     <div class="col-md-6">
       <div *ngFor="let theme of themeMappings">
-        <div class="card template-card">
-          <img class="card-img-top" src={{theme.image}} alt="Card image">
-          <div class="card-body">
-            <h4 class="card-title">{{theme.name}}</h4>
-            <p class="card-text">{{theme.description}}</p>
-            <a [routerLink]="['webpagebuilder/'+theme.name]" class="btn btn-primary">Use theme</a>
+        <div class="thumbnail template-card" (click)="navigateToTheme(theme.name)">
+          <img src={{theme.image}}>
+          <div class="caption">
+            <h4>{{theme.name}}</h4>
+            <p>{{theme.description}}</p>
           </div>
         </div>
       </div>

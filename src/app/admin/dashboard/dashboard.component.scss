@@ -1,5 +1,9 @@
 .template-card {
-    width: 400px;
+    width: 280px;
+    cursor: pointer;
+}
+.caption {
+ text-align: center !important;
 }
 
 .template-card img {
@@ -10,4 +14,8 @@
     margin: auto;
     width: 60%;
     padding: 10px;
+}
+
+.theme-img {
+    width: 250px !important;
 }
