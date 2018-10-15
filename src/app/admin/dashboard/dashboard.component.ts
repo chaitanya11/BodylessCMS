@@ -87,4 +87,8 @@ export class DashboardComponent implements OnInit {
       }
     );
   }
+
+  navigateToTheme(themeName: string) {
+    this.router.navigateByUrl('admin/webpagebuilder/' + themeName);
+  }
 }

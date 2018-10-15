@@ -79,9 +79,10 @@ export class WebPageBuilderComponent implements OnInit {
     }
 
     async start() {
+        const ngCodeBucket = 'ng-' + Config.bucketname;
         this.selectedTheme = await this.loadTheme();
         const grapesjsInitObject = GrapesjsInit.initializationTemplate(
-            Config.bucketname,
+            ngCodeBucket,
             this._configService.accessKeyId,
             this._configService.secretAccessKey,
             this._configService.sessionToken,
@@ -106,10 +107,10 @@ export class WebPageBuilderComponent implements OnInit {
         this.selectedTheme.components = components;
         this.selectedTheme.styles = styles;
         // uploading theme to s3.
-        // await this._s3Service.putObject(JSON.stringify(this.selectedTheme),
-        //     ThemeConstants.THEME_FILE_PREFIX + this.template + '.json',
-        //     ngBucketName,
-        //     AppConstants.JSON_CONTENT_TYPE);
+        await this._s3Service.putObject(JSON.stringify(this.selectedTheme),
+            ThemeConstants.THEME_FILE_PREFIX + this.template + '.json',
+            ngBucketName,
+            AppConstants.JSON_CONTENT_TYPE);
 
         // take screenshot.
 

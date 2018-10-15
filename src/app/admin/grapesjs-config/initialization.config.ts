@@ -22,8 +22,8 @@ export default class GrapesjsInit {
             pluginsOpts: {
                 'gjs-plugin-s3': {
                     imgFormats: ['png', 'jpeg', 'jpg'],
-                    bucketName: bucketname, // should be ng code bucket.
-                    prefix: 'content/img/', // FIXME should be assets/img/
+                    bucketName: bucketname,
+                    prefix: 'assets/img/',
                     accessKeyId: accessKeyId,
                     secretAccessKey: secretAccessKey,
                     sessionToken: sessionToken
