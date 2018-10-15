@@ -30,7 +30,7 @@
     "grapesjs-custom-code": "^0.1.1",
     "grapesjs-plugin-button-event": "^0.0.5",
     "grapesjs-plugin-publish-s3": "^1.0.4",
-    "grapesjs-plugin-s3": "^0.1.4",
+    "grapesjs-plugin-s3": "^0.1.6",
     "html2canvas": "^1.0.0-alpha.12",
     "jquery": "^3.3.1",
     "rxjs": "^6.0.0",
