@@ -19,8 +19,8 @@ export class LogoutComponent implements OnInit {
 
   clearSession() {
     localStorage.clear();
-    delete this._configService;
     this._cognitoService.signOut();
+    delete this._configService;
     this.router.navigateByUrl('/admin/login');
   }
 }
