@@ -1,15 +1,15 @@
 <div class="container-fluid">
   <div class="login-block">
-    <div class="row">
+    <div class="row form-group">
       <div class="col-md-12">
         <label for="userName">Username</label>
-        <input type="text" name="userName" id="userName" [(ngModel)]="userName">
+        <input type="text" class="form-control" name="userName" id="userName" [(ngModel)]="userName">
       </div>
       <div class="col-md-12">
         <label for="password">Password</label>
-        <input type="password" name="password" id="password" [(ngModel)]="password">
+        <input type="password" class="form-control" name="password" id="password" [(ngModel)]="password">
       </div>
-      <button class="btn btn-primary" (click)="login()">Login</button>
+        <button class="btn btn-primary login-button" (click)="login()">Login</button>
     </div>
   </div>
 </div>

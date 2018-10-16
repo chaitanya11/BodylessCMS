@@ -98,6 +98,8 @@ export class CognitoService {
   }
 
   signOut() {
-    this.cognitoUser.signOut();
+    if (this.cognitoUser) {
+      this.cognitoUser.signOut();
+    }
   }
 }

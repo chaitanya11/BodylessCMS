@@ -1,7 +1,8 @@
 <div class="container-fluid">
+  <app-navbar></app-navbar>
   <div class="row">
     <div class="col-md-6">
-      <div class="custom-template-button">
+      <div class="custom-template-wrapper">
         <div class="thumbnail template-card" data-toggle="modal" data-target="#createNewTheme">
           <img src="../../../assets/img/plus-icon.svg">
           <div class="caption">
@@ -10,8 +11,8 @@
         </div>
       </div>
     </div>
-    <div class="col-md-6">
-      <div *ngFor="let theme of themeMappings">
+    <div *ngFor="let theme of themeMappings" class="col-md-6">
+      <div class="custom-template-wrapper">
         <div class="thumbnail template-card" (click)="navigateToTheme(theme.name)">
           <img src={{theme.image}}>
           <div class="caption">
