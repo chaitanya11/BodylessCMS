@@ -63,6 +63,8 @@ Navigate to `http://localhost:4200/`. The app will automatically reload if you c
     clientId = '<Aws Cognito Userpool Client Id>';
     identityPoolId = '<Aws Cognito Identitypool  Id>';
     awsRegion = '<Aws Region>';
+    bucketname = '<Aws bucketname>';
+    projectName = '<Aws projectName>';
     ```
 * signup with new user, go to cognito and confirm his status.   (use these credentials for logging into application.)
 
