@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { LogoutComponent } from './logout/logout.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   imports: [
@@ -24,7 +25,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     WebPageBuilderComponent,
     LoginComponent,
     SignupComponent,
-    LogoutComponent
+    LogoutComponent,
+    NavbarComponent
   ],
   providers: []
 })

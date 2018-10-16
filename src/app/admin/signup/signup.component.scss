@@ -1,5 +1,29 @@
 .signup-block {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     margin: auto;
     max-width: 25%;
+    background-color: #F8F8F8;
+    height: 300px;
+    border-color: #ccc;
+    border-width: 1px;
+    border-style: solid;
+}
 
+.signup-block div {
+    margin: auto;
+    left: 0;
+    right: 0;
+    max-width: 90%;
+    padding-top: 10px;
+}
+
+
+.signup-button {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    margin-left: 35%
 }
