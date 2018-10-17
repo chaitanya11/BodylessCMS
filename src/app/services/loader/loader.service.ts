@@ -7,21 +7,19 @@ declare var $;
 })
 export class LoaderService {
 
-  constructor() {
-    this.showLoader();
-  }
+  constructor() {}
 
   /**
    * Display loader.
    */
-  showLoader() {
-    $('#cover-spin').style.display = 'block';
+  show() {
+    $('#spin-block').css('display', 'block');
   }
 
   /**
    * Hides loader.
    */
-  hideLoader() {
-    $('#cover-spin').style.display = 'none';
+  hide() {
+    $('#spin-block').css('display', 'none');
   }
 }

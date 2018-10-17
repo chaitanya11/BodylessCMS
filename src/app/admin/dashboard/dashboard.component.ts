@@ -8,6 +8,8 @@ import { Config } from '../../services/aws/config/index';
 import { Router } from '@angular/router';
 import { ThemeService } from '../../services/themes/theme.service';
 import { AppConstants } from '../constants/app.constants';
+import { LoaderService } from '../../services/loader/loader.service';
+
 
 declare var $: any;
 
@@ -26,7 +28,8 @@ export class DashboardComponent implements OnInit {
     private fb: FormBuilder,
     private _s3Service: S3Service,
     private router: Router,
-    private _themeService: ThemeService) {
+    private _themeService: ThemeService,
+    private _loader: LoaderService) {
     this.createThemeForm = this.fb.group({
       themeName: ['', Validators.required],
       themeDescription: ['', Validators.required]
@@ -47,6 +50,7 @@ export class DashboardComponent implements OnInit {
      * Redirect to webpagebuilder with given template name.
      */
     console.log('create new theme.');
+    this._loader.show();
     const themeName = this.createThemeForm.value.themeName;
     const themeFileName = ThemeConstants.THEME_FILE_PREFIX + themeName + '.json';
     const newThemeMapping = new ThemeMap(themeName,
@@ -68,6 +72,7 @@ export class DashboardComponent implements OnInit {
       AppConstants.JSON_CONTENT_TYPE
     );
     $('#createThemeModalClose').click();
+    this._loader.hide();
     // redirecting to new theme page.
     this.router.navigateByUrl('admin/webpagebuilder/' + themeName);
   }
