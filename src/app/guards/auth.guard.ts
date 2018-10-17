@@ -16,7 +16,7 @@ export class AuthGuard implements CanActivate {
     const sessionToken = localStorage.getItem('sessionToken');
     const accessKeyId = localStorage.getItem('accessKeyId');
     const secretAccessKey = localStorage.getItem('secretAccessKey');
-    if ([sessionToken, accessKeyId, secretAccessKey].every((key) => key != undefined)) {
+    if ([sessionToken, accessKeyId, secretAccessKey].every((key) => ((key !== undefined) && (key !== null)))) {
       if (!this._configService.checkConfig()) {
         this._configService.setConfig(accessKeyId, secretAccessKey, sessionToken);
       }
