@@ -46,10 +46,16 @@
       <!-- Modal body -->
       <div class="modal-body">
         <form [formGroup]="createThemeForm">
-          <label for="themeName">Theme Name:</label>
-          <input type="text" class="form-control" formControlName="themeName" id="themeName">
-          <label for="themeDescription">Theme Description:</label>
-          <input type="text" class="form-control" formControlName="themeDescription" id="themeDescription">
+          <div class="row">
+            <div class="col-md-12 create-theme-form-field">
+              <label for="themeName">Theme Name:</label>
+              <input type="text" class="form-control" formControlName="themeName" id="themeName">
+            </div>
+            <div class="col-md-12 create-theme-form-field">
+              <label for="themeDescription">Theme Description:</label>
+              <input type="text" class="form-control" formControlName="themeDescription" id="themeDescription">
+            </div>
+          </div>
         </form>
       </div>
 

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Config } from '../app/services/aws/config/index';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
+  title = Config.projectName;
+  constructor(private _titleService: Title) {
+    this._titleService.setTitle(Config.projectName);
+  }
 }
