@@ -11,6 +11,8 @@ import * as html2canvas from 'html2canvas';
 import ThemeConstants from '../constants/theme.constants';
 import { AppConstants } from '../constants/app.constants';
 import ThemeMap from '../beans/thememap.bean';
+import { LoaderService } from '../../services/loader/loader.service';
+
 
 
 declare var grapesjs: any; // Important!
@@ -32,7 +34,8 @@ export class WebPageBuilderComponent implements OnInit {
         private router: Router,
         private route: ActivatedRoute,
         private _themeService: ThemeService,
-        private _s3Service: S3Service) {
+        private _s3Service: S3Service,
+        private _loadderService: LoaderService) {
         // get template
         this.template = this.route.snapshot.paramMap.get('template');
         // register events.
@@ -79,7 +82,7 @@ export class WebPageBuilderComponent implements OnInit {
     }
 
     async start() {
-        const ngCodeBucket = 'ng-' + Config.bucketname;
+        const ngCodeBucket = Config.bucketname;
         this.selectedTheme = await this.loadTheme();
         const grapesjsInitObject = GrapesjsInit.initializationTemplate(
             ngCodeBucket,
@@ -95,6 +98,7 @@ export class WebPageBuilderComponent implements OnInit {
     }
 
     async saveTemplate() {
+        this._loadderService.show();
         const components = this.editor.getComponents();
         const styles = this.editor.getStyle();
         /**
@@ -139,6 +143,7 @@ export class WebPageBuilderComponent implements OnInit {
                     ThemeConstants.THEME_MAPPING_FILE_NAME,
                     ngBucketName,
                     AppConstants.JSON_CONTENT_TYPE);
+                this._loadderService.hide();
             },
             err => {
                 // TODO something went wrong.
