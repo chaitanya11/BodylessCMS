@@ -23,7 +23,7 @@ export default class GrapesjsInit {
                 'gjs-plugin-s3': {
                     imgFormats: ['png', 'jpeg', 'jpg'],
                     bucketName: bucketname,
-                    prefix: 'assets/img/',
+                    prefix: 'content/img/',
                     accessKeyId: accessKeyId,
                     secretAccessKey: secretAccessKey,
                     sessionToken: sessionToken
