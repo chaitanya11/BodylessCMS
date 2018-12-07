@@ -2,6 +2,8 @@
 
 BodylessCMS doesn't require any kind of Backend or database or any kind of third party api's, but can provide content management and scalability to any extent. The main objective of this project to cut down infrastructure cost and complexity of CMS. We already has a concept of [HeadlessCMS](https://en.wikipedia.org/wiki/Headless_CMS), which has plain user interface to serve content from third party api's. That requires reliable third party to store our content and cost for content management and for security of data. In BodylessCMS you just need AWS s3 to serve content and to manage website. Security has no issues, reliable and scalable to any extent.
 
+Here is an article about BodylessCMS in [Meidum](https://medium.com/@chaitanya.garikipati123/bodylesscms-e2a83a841cd).
+
 ## Running in local
 Have all the requirements ready before running application in local.
 ```
@@ -71,10 +73,13 @@ Navigate to `http://localhost:4200/`. The app will automatically reload if you c
 
 
 ## checkpoints
-* Webpack integration
+* ~~Webpack integration~~
 * ~~S3 integration~~
 * ~~Save Content designed from admin dashboard to S3.~~
 * ~~Integrate cognito~~
 * ~~Add security to application.~~
-* create a component for conforming user status.
+* ~~create a component for conforming user status.~~
+* Make this as Progressive Web App (PWA)
+* Implement tree shaking for build pack.
+* Create diffrent kinds of grapesJS plugins to support diffrent types of analytics and etc.
 * All other improvements (Themes, preview, different kinds of content, etc).
