@@ -7,7 +7,7 @@ import Theme from '../beans/theme.bean';
 import GrapesjsInit from '../grapesjs-config/initialization.config';
 import { ThemeService } from '../../services/themes/theme.service';
 import { S3Service } from '../../services/aws/s3/s3.service';
-import * as html2canvas from 'html2canvas';
+import html2canvas from "html2canvas";
 import ThemeConstants from '../constants/theme.constants';
 import { AppConstants } from '../constants/app.constants';
 import ThemeMap from '../beans/thememap.bean';
@@ -118,10 +118,10 @@ export class WebPageBuilderComponent implements OnInit {
 
         // take screenshot.
 
-        html2canvas(document.getElementsByClassName('gjs-cv-canvas')[0], {
+        html2canvas(document.getElementsByClassName('gjs-cv-canvas')[0] as HTMLElement, {
             useCORS: true
         }).then(async canvas => {
-            let imgData = canvas.toDataURL(AppConstants.PNG_CONTENT_TYPE);
+            let imgData: any = canvas.toDataURL(AppConstants.PNG_CONTENT_TYPE);
             imgData = this.dataURItoBlob(imgData);
             await this._s3Service.putObject(imgData,
                 ThemeConstants.IMG_PREFIX + this.template + '.png',
